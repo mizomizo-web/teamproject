@@ -38,6 +38,18 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $('.menu').toggleClass('open');
   });
 
+    // ハンバーガーメニュー
+    $(".js-hamburger").on("click", function () {
+      if ($(".js-hamburger").hasClass('is-active')) {
+        $(".js-nav-menu").fadeOut();
+        $(".js-hamburger").removeClass("is-active");
+      } else {
+        $(".js-nav-menu").fadeIn();
+        $(".js-hamburger").addClass("is-active");
+      }
+      // $('body').css('overflow-y', 'hidden');  // 本文の縦スクロールを無効
+    });
+
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
   $(document).on('click', 'a[href*="#"]', function () {
     let time = 400;
