@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.c-title {
+  
+}
+
+.c-title__ja {
+  font-size: rem(20);
+  font-weight: $normal;
+  line-height: calc(29/20);
+  letter-spacing: 0.1em;
+  // color: $white;
+  color: $black; //テスト
+  text-align: center;
+
+  @include mq(md) {
+    font-size: rem(30);
+    line-height: calc(35/30);
+    letter-spacing: 0.0667em;
+  }
+}
+
+.c-title__en {
+  font-family: $second-font-family;
+  font-size: rem(50);
+  line-height: calc(72/50);
+  letter-spacing: 0.04em;
+  color: $yellow;
+  opacity: 0.2;
+  text-align: center;
+  text-transform: capitalize;
+
+  @include mq(md) {
+    font-size: rem(110);
+    line-height: calc(158/110);
+    letter-spacing: 0.0182em;
+    // text-align: right;
+  }
+}
