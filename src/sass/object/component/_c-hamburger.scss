@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.c-hamburger {
+  position: fixed;
+  top: rem(18);
+  right: rem(21);
+  cursor: pointer;
+  z-index: 99999;
+
+  @include mq('md') {
+    display: none;
+  }
+}
