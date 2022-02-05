@@ -2,7 +2,17 @@
 
 .c-logo {
 	width: rem(70);
+	height: inherit;
+	display: flex;
+	align-items: center;
 	@include mq('md') {
 		width: rem(94);
+	}
+}
+
+.c-logo a img {
+	height: rem(39);
+	@include mq('md') {
+		height: rem(25);
 	}
 }
