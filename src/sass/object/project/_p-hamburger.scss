@@ -29,3 +29,24 @@
 .p-hamburger__bar3 {
   top: rem(10);
 }
+
+//jQueryでclass付与
+.p-hamburger.is-active {
+  .p-hamburger__bar1 {
+    top: rem(8);
+    right: 0;
+    transform: rotate(45deg);
+  }
+
+  .p-hamburger__bar2 {
+    top: rem(8);
+    right: 0;
+    display: none;
+  }
+
+  .p-hamburger__bar3 {
+    top: rem(8);
+    right: 0;
+    transform: rotate(-45deg);
+  }
+}
