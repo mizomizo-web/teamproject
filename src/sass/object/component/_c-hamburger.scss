@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.c-hamburger {
+  position: fixed;
+  top: rem(18);
+  right: rem(21);
+	width: rem(24);
+  height: rem(13);
+  cursor: pointer;
+  z-index: 99999;
+
+  @include mq('md') {
+    display: none;
+  }
+}
