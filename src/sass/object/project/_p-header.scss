@@ -3,3 +3,8 @@
 .p-header {
 	height: rem(50);
 }
+
+.p-header__inner {
+	max-width: $l-inner;
+	width: 100%;
+}
