@@ -1,0 +1,43 @@
+<!-- 以下のコメントアウトはnews.ejs適用分。postNameには記事タイトルが入る。コメントアウト外す際は#を消す。 -->
+<%#-include('./component/_c-breadcrumb',{
+	categoryName:'お知らせ',
+	postName:'',
+	src:'news.html'
+	})
+%>
+
+
+
+<div class="c-breadcrumb p-breadcrumb">
+	<ol class="p-breadcrumb__lists" itemscope itemtype="https://schema.org/BreadcrumbList">
+		<!-- 1つめ -->
+		<li class="p-breadcrumb__list" itemprop="itemListElement" itemscope
+				itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="index.html">
+					<span itemprop="name">トップ</span>
+			</a>
+			<meta itemprop="position" content="1" />
+		</li>
+	
+		<!-- 2つめ -->
+		<li class="p-breadcrumb__list" itemprop="itemListElement" itemscope
+				itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="<%= src %>">
+					<span class="p-breadcrumb__level" itemprop="name"><%= categoryName %></span>
+			</a>
+			<meta itemprop="position" content="2" />
+		</li>
+
+		<!-- 3つめ -->
+		<% if (postName !== '') { %>
+		<li class="p-breadcrumb__list" itemprop="itemListElement" itemscope
+				itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="#">
+					<span class="p-breadcrumb__level" itemprop="name"><%= postName %></span>
+			</a>
+			<meta itemprop="position" content="3" />
+		</li>
+		<% } %>
+
+	</ol>
+</div>
