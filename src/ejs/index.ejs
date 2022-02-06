@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<%- include('./common/_head') %>
+  <%- include('./common/_head') %>
   <body>
     <!-- <%- include('./common/_top-header') %>
       <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
@@ -17,7 +17,11 @@
     <!-- テストでタイトルをejsで追加 -->
     <%- include('./component/_c-title',{jaTitle:'事業内容', enTitle:'content'}) %>
 
+    <!-- フッター -->
+    <%- include('./project/_p-footer') %>
+    
     <!-- ページトップ -->
     <%- include('./component/_c-pagetop') %>
+
   </body>
 </html>
