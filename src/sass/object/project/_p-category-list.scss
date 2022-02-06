@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.p-category-list__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: rem(-16) 0 0 rem(-24);
+
+  @include mq(md) {
+    margin: initial;
+  }
+}
+
+.p-category-list__item {
+  margin-top: rem(16);
+  margin-left: rem(24);
+
+  @include mq(md) {
+    margin: initial;
+  }
+  
+  @include mq(md) {
+    & + & {
+      margin-left: rem(40);
+    }
+  }
+}
+
+.p-category-list__link {
+  letter-spacing: 0.125em;
+  color: $white;
+  text-transform: uppercase;
+  transition: color 0.3s;
+
+  @include mq(md) {
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &.is-active {
+    background-color: $white;
+    color: $gray;
+    padding: rem(3) rem(10);
+    
+    @include mq(md) {
+      pointer-events: none;
+    }
+  }
+}
