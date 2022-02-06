@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.p-pagination {
+	max-width: rem(332);
+	width: 100%;
+	margin: rem(80) auto 0;
+	@include mq('md') {
+		margin: rem(104) auto 0;
+	}
+}
+
+.p-pagination__lists {
+	display: flex;
+}
+
+.p-pagination__prev,
+.p-pagination__next,
+.p-pagination__list {
+	border: 1px solid $white;
+}
+
+.p-pagination__list:first-child {
+	margin-left: rem(24);
+}
+
+.p-pagination__list:not(:first-child) {
+	margin-left: rem(16);
+}
+
+.p-pagination__next {
+	margin-left: rem(24);
+}
+
+.p-pagination__current,
+.p-pagination__link {
+	padding: rem(4) rem(8);
+}
+
+.p-pagination__prev,
+.p-pagination__next {
+	padding: rem(1) rem(13);
+}
+
+.p-pagination__link,
+.p-pagination__prev,
+.p-pagination__next {
+	color: $white;
+}
+
+.p-pagination__current {
+	color: $gray;
+	background-color: $white;
+}
