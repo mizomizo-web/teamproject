@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.c-pagetop {
+	position: fixed;
+	bottom: rem(40);
+	right: rem(20);
+	z-index: 1000;
+	width: rem(45);
+	height: rem(45);
+	background-color: $white;
+	cursor: pointer;
+}
+
+.c-pagetop::after {
+	content: "";
+	position: absolute;
+	top: rem(20);
+	left: rem(14);
+	width: rem(17);
+	height: rem(17);
+	border-top: 2px solid #333;
+	border-left: 2px solid #333;
+	transform: rotate(45deg);
+}
+
+.c-pagetop:hover {
+	background-color: $gray;
+}
+
+.c-pagetop:hover::after {
+	border-top-color: $white;
+	border-left-color: $white;
+}
+
+.c-pagetop a {
+	display: block;
+	width: rem(45);
+	height: rem(45);
+}

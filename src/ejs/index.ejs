@@ -5,19 +5,19 @@
     <!-- <%- include('./common/_top-header') %>
       <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
     <%- include('./common/_footer') %>
-    
-    
+
+
     <% for (var i=0; i < 4; i++) { %>
       <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
       <% } %> -->
 
     <!-- ヘッダー -->
     <%- include('./project/_p-header') %>
-    <%- include('./project/_p-sp-nav') %>
-    
+
     <!-- テストでタイトルをejsで追加 -->
     <%- include('./component/_c-title',{jaTitle:'事業内容', enTitle:'content'}) %>
 
-
+    <!-- ページトップ -->
+    <%- include('./component/_c-pagetop') %>
   </body>
 </html>
