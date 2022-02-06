@@ -3,10 +3,6 @@
 .c-logo {
 	width: rem(70);
 	height: inherit;
-	display: flex;
-	align-items: center;
-	position: relative;
-	z-index: 1300;
 	@include mq('md') {
 		width: rem(94);
 	}
