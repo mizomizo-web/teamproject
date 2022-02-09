@@ -62,27 +62,46 @@
   }
 }
 
-// 背景白ボタン
-.c-btn--white {
+//TOPニュースのボタン
+.c-btn--top-news {
   @include mq(md) {
+    font-weight: 500;
+    padding: rem(5) 0;
+    max-width: rem(134);
     color: #000;
     background-color: $white;
   }
-
+  
   &:hover {
     color: $white;
   }
-
+  
   &::before {
     background-color: $gray;
   }
 }
 
+// 背景白ボタン
+// .c-btn--white {
+//   @include mq(md) {
+//     color: #000;
+//     background-color: $white;
+//   }
+
+//   &:hover {
+//     color: $white;
+//   }
+
+//   &::before {
+//     background-color: $gray;
+//   }
+// }
+
 // サイズ小ボタン
-.c-btn--small {
-  @include mq(md) {
-    font-weight: 500;
-    padding: rem(5) 0;
-    max-width: rem(134);
-  }
-}
+// .c-btn--small {
+//   @include mq(md) {
+//     font-weight: 500;
+//     padding: rem(5) 0;
+//     max-width: rem(134);
+//   }
+// }
