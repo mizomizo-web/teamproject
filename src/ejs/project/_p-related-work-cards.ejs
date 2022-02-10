@@ -1,0 +1,16 @@
+<%
+  imagePath = "./images";
+%>
+
+<% const cardItem = [
+  {src:imagePath + "/work/work01.jpg", alt:"タイトルが入ります。タイトルが入ります。", title:"タイトルが入ります。タイトルが入ります。", excerpt:"説明文が入ります。説明文が入ります。説明文が入ります。", category:"カテゴリ", datetime:"2021-07-20" ,time:"2021.07.20"},
+  {src:imagePath + "/work/work02.jpg", alt:"タイトルが入ります。タイトルが入ります。", title:"タイトルが入ります。タイトルが入ります。", excerpt:"説明文が入ります。説明文が入ります。説明文が入ります。", category:"カテゴリ", datetime:"2021-07-20" ,time:"2021.07.20"},
+  {src:imagePath + "/work/work03.jpg", alt:"タイトルが入ります。タイトルが入ります。", title:"タイトルが入ります。タイトルが入ります。", excerpt:"説明文が入ります。説明文が入ります。説明文が入ります。", category:"カテゴリ", datetime:"2021-07-20" ,time:"2021.07.20"},
+  {src:imagePath + "/work/work04.jpg", alt:"タイトルが入ります。タイトルが入ります。", title:"タイトルが入ります。タイトルが入ります。", excerpt:"説明文が入ります。説明文が入ります。説明文が入ります。", category:"カテゴリ", datetime:"2021-07-20" ,time:"2021.07.20"},
+] %>
+
+<ul class="p-related-work-cards">
+  <% for (var item of cardItem) {%>
+    <%- include('./_p-related-work-card',{src:item.src, alt:item.alt, title:item.title, excerpt:item.excerpt, category:item.category, datetime:item.datetime, time:item.time}) %>
+  <% } %>
+</ul>
