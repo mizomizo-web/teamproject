@@ -1,0 +1,21 @@
+<%
+  imagePath = "./images";
+%>
+
+<% const cardItem = [
+  {category:"カテゴリ1", src:imagePath + "/blog/blog01.jpg", alt:"blog01", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
+  {category:"カテゴリ2", src:imagePath + "/blog/blog02.jpg", alt:"blog02", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
+  {category:"カテゴリ3", src:imagePath + "/blog/blog03.jpg", alt:"blog03", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
+  // {category:"カテゴリ1", src:imagePath + "/blog/blog04.jpg", alt:"blog04", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
+  // {category:"カテゴリ2", src:imagePath + "/blog/blog05.jpg", alt:"blog05", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
+  // {category:"カテゴリ3", src:imagePath + "/blog/blog06.jpg", alt:"blog06", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
+  // {category:"カテゴリ1", src:imagePath + "/blog/blog07.jpg", alt:"blog07", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
+  // {category:"カテゴリ2", src:imagePath + "/blog/blog08.jpg", alt:"blog08", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
+  // {category:"カテゴリ3", src:imagePath + "/blog/blog09.jpg", alt:"blog09", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" }
+] %>
+
+<ul class="p-top-blog">
+  <% for (var item of cardItem) {%>
+    <%- include('../component/_c-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
+  <% } %>
+</ul>
