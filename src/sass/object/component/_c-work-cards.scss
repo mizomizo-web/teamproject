@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.c-work-cards {
-  @include mq(md) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
