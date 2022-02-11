@@ -1,9 +1,29 @@
-<li class="p-work-card">
-  <a href="#!" class="p-work-card__link">
-    <div class="p-work-card__head">
-      <img src="<%= src %>" alt="<%= alt %>">
-      <span class="p-work-card__category"><%= category %></span>
-    </div>
-    <h2 class="p-work-card__title"><%= title %></h2>
-  </a>
-</li>
+<!-- 以下をsingle-works.ejsに記述 -->
+<%# var location = {page_id:'single-works'} %>
+<%#- include('./project/_p-work-cards', {page: location}) %>
+
+<!-- 以下をsub-works.ejsに記述 -->
+<%# var location = {page_id:'sub-works'} %>
+<%#- include('./project/_p-work-cards', {page: location}) %>
+
+<% if (page.page_id == 'single-works') { %>
+  <li class="p-work-card p-related-work-cards__item">
+    <a href="#!" class="p-work-card__link">
+      <div class="p-work-card__head">
+        <img src="<%= src %>" alt="<%= alt %>">
+        <span class="p-work-card__category"><%= category %></span>
+      </div>
+      <h2 class="p-work-card__title"><%= title %></h2>
+    </a>
+  </li>
+<% } else { %>
+  <li class="p-work-card p-sub-works-cards__item">
+    <a href="#!" class="p-work-card__link">
+      <div class="p-work-card__head">
+        <img src="<%= src %>" alt="<%= alt %>">
+        <span class="p-work-card__category"><%= category %></span>
+      </div>
+      <h2 class="p-work-card__title"><%= title %></h2>
+    </a>
+  </li>
+<% } %>
