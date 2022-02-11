@@ -1,10 +1,10 @@
 <!-- 以下をindex.ejsに記述、singleページに使うときはpage_idの中身とincludeのファイル名変える -->
 <%# var location = {page_id:'top'} %>
-<%#- include('./project/_p-top-blog', {page: location}) %>
+<%#- include('./project/_p-top-blog-cards', {page: location}) %>
 
 
-<% if (page.page_id == 'top') { %>
-<li class="p-blog-card p-top-blog__item">
+<% if (page.page_id == 'single-blog') { %>
+<li class="p-blog-card p-related-blog-cards__item">
   <a href="#" class="p-blog-card__link">
     <div class="p-blog-card__img">
       <img src="<%= src %>" alt="<%= alt %>" />
@@ -20,7 +20,7 @@
   </a>
 </li>
 <% } else { %>
-<li class="p-blog-card p-single-blog__item">
+<li class="p-blog-card p-top-blog-cards__item">
   <a href="#" class="p-blog-card__link">
     <div class="p-blog-card__img">
       <img src="<%= src %>" alt="<%= alt %>" />
