@@ -14,8 +14,8 @@
   // {category:"カテゴリ3", src:imagePath + "/blog/blog09.jpg", alt:"blog09", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" }
 ] %>
 
-<ul class="p-top-blog">
+<ul class="p-top-blog-cards">
   <% for (var item of cardItem) {%>
-    <%- include('../component/_c-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
+    <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
   <% } %>
 </ul>
