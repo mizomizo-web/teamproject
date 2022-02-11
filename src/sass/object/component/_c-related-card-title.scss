@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.c-related-card-title {
+  font-weight: $normal;
+  font-size: rem(16);
+  line-height: calc(23/16);
+  letter-spacing: 0.125em;
+  border: 1px solid $white;
+  background-color: $gray;
+  color: $white;
+  text-align: center;
+  padding: rem(8) 0;
+  width: 100%;
+}

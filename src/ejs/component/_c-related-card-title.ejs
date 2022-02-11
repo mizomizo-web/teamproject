@@ -1,0 +1,15 @@
+<!-- 以下をworks.ejsに記述 -->
+<%# var location = {page_id:'works'} %>
+<%#- include('./component/_c-related-card-title', {page: location}) %>
+
+<!-- 以下をblog.ejsに記述 -->
+<%# var location = {page_id:'blog'} %>
+<%# include('./component/_c-related-card-title', {page: location}) %>
+
+<% if (page.page_id == 'works') { %>
+  <h2 class="c-related-card-title">関連制作</h2>
+<% } else if (page.page_id == 'blog') { %>
+  <h2 class="c-related-card-title">関連記事</h2>
+<% } else { %>
+  <h2 class="c-related-card-title"></h2>
+<% } %>
