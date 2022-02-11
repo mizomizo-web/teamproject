@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.p-sub-work-cards {
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-sub-work-cards__items {
+  
+}
+
+.p-sub-work-cards__item {
+  & + & {
+    margin-top: rem(48);
+  }
+  
+  @include mq(md) {
+    width: calc(50% - #{rem(48)}/2);
+
+    & + & {
+      margin-top: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-left: rem(48);
+    }
+
+    &:nth-child(n+3) {
+      margin-top: rem(114);
+    }
+  }
+}
