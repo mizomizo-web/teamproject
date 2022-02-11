@@ -1,8 +1,27 @@
 @use "global" as *;
 
-.p-related-work-cards {
+.p-related-work-cards__items {
+  
+}
+
+.p-related-work-cards__item {
+  & + & {
+    margin-top: rem(24);
+  }
+
   @include mq(md) {
-    display: flex;
-    flex-wrap: wrap;
+    width: calc(100%/4 - #{rem(32)}*3/4);
+
+    & + & {
+      margin-top: 0;
+    }
+
+    &:not(:nth-child(4n+1)) {
+      margin-left: rem(32);
+    }
+
+    &:nth-child(n+5) {
+      margin-top: rem(48);
+    }
   }
 }
