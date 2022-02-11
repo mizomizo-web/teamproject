@@ -1,49 +1,47 @@
 @use "global" as *;
 
-.c-work-card {
+.p-work-card {
   //marginはBlock要素に付与予定
-  position: relative;
-
-  & + & {
-    margin-top: rem(48);
-  }
+  // & + & {
+  //   margin-top: rem(48);
+  // }
   
-  @include mq(md) {
-    width: calc(50% - #{rem(48)}/2);
+  // @include mq(md) {
+  //   width: calc(50% - #{rem(48)}/2);
 
-    & + & {
-      margin-top: 0;
-    }
+  //   & + & {
+  //     margin-top: 0;
+  //   }
 
-    &:nth-child(2n) {
-      margin-left: rem(48);
-    }
+  //   &:nth-child(2n) {
+  //     margin-left: rem(48);
+  //   }
 
-    &:nth-child(n+3) {
-      margin-top: rem(114);
-    }
-  }
+  //   &:nth-child(n+3) {
+  //     margin-top: rem(114);
+  //   }
+  // }
 }
 
-.c-work-card__link {
+.p-work-card__link {
   &:hover {
-    .c-work-card__head img {
+    .p-work-card__head img {
       transform: scale(1.1);
     }
 
-    .c-work-card__title {
+    .p-work-card__title {
       color: $yellow;
     }
   }
 }
 
-.c-work-card__head {
+.p-work-card__head {
   overflow: hidden;
   padding-top: 66.57%; // 223/335*100%
   position: relative;
 }
 
-.c-work-card__category {
+.p-work-card__category {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -56,7 +54,7 @@
   padding: rem(8) rem(20);
 }
 
-.c-work-card__head img {
+.p-work-card__head img {
   position: absolute;
   top: 0;
   left: 0;
@@ -67,7 +65,7 @@
   transition: transform 0.3s;
 }
 
-.c-work-card__title {
+.p-work-card__title {
   font-weight: 500;
   font-size: rem(18);
   line-height: calc(35/18);
