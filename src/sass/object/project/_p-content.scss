@@ -45,6 +45,10 @@
   content: "";
   display: block;
   padding-top: 89.36%;
+
+	@include mq('md') {
+		padding-top: 100%;
+	}
 }
 
 .p-content__img img {
