@@ -1,10 +1,17 @@
 @use "global" as *;
 
-.p-sub-works-cards__items {
+.p-sub-work-cards {
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-sub-work-cards__items {
   
 }
 
-.p-sub-works-cards__item {
+.p-sub-work-cards__item {
   & + & {
     margin-top: rem(48);
   }

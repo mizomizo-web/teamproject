@@ -1,5 +1,12 @@
 @use "global" as *;
 
+.p-related-work-cards {
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }  
+}
+
 .p-related-work-cards__items {
   
 }

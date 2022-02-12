@@ -3,14 +3,14 @@
 %>
 
 <% const cardItem = [
-  {src:imagePath + "/work/work01.jpg", alt:"タイトルが入ります。タイトルが入ります。", title:"タイトルが入ります。タイトルが入ります。", excerpt:"説明文が入ります。説明文が入ります。説明文が入ります。", category:"カテゴリ", datetime:"2021-07-20" ,time:"2021.07.20"},
-  {src:imagePath + "/work/work02.jpg", alt:"タイトルが入ります。タイトルが入ります。", title:"タイトルが入ります。タイトルが入ります。", excerpt:"説明文が入ります。説明文が入ります。説明文が入ります。", category:"カテゴリ", datetime:"2021-07-20" ,time:"2021.07.20"},
-  {src:imagePath + "/work/work03.jpg", alt:"タイトルが入ります。タイトルが入ります。", title:"タイトルが入ります。タイトルが入ります。", excerpt:"説明文が入ります。説明文が入ります。説明文が入ります。", category:"カテゴリ", datetime:"2021-07-20" ,time:"2021.07.20"},
-  {src:imagePath + "/work/work04.jpg", alt:"タイトルが入ります。タイトルが入ります。", title:"タイトルが入ります。タイトルが入ります。", excerpt:"説明文が入ります。説明文が入ります。説明文が入ります。", category:"カテゴリ", datetime:"2021-07-20" ,time:"2021.07.20"},
+  {category:"カテゴリ１", src:imagePath + "/work/work01.jpg", alt:"株式会社CodeUps", title:"株式会社CodeUps" },
+  {category:"カテゴリ１", src:imagePath + "/work/work02.jpg", alt:"株式会社CodeUps2", title:"株式会社CodeUps2" },
+  {category:"カテゴリ１", src:imagePath + "/work/work03.jpg", alt:"株式会社CodeUps3", title:"株式会社CodeUps3" },
+  {category:"カテゴリ１", src:imagePath + "/work/work04.jpg", alt:"株式会社CodeUps4", title:"株式会社CodeUps4" },
 ] %>
 
 <ul class="p-related-work-cards">
   <% for (var item of cardItem) {%>
-    <%- include('./_p-related-work-card',{src:item.src, alt:item.alt, title:item.title, excerpt:item.excerpt, category:item.category, datetime:item.datetime, time:item.time}) %>
+    <%- include('./_p-work-card',{src:item.src, alt:item.alt, title:item.title, excerpt:item.excerpt, category:item.category, datetime:item.datetime, time:item.time}) %>
   <% } %>
 </ul>
