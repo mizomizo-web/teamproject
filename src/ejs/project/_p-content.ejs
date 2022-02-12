@@ -1,0 +1,17 @@
+<!-- 以下をindex.ejsに記述、下層ページに使うときはpage_idの中身とincludeのファイル名変える -->
+<%# var location = {page_id:'top'} %>
+<%#- include('./project/_p-content', {page: location}) %>
+
+<% if (page.page_id == 'top') { %>
+<li class="p-content p-top-contents__item">
+	<a href="#" class="p-content__link">
+		<figure class="p-content__img">
+			<img src="<%= src %>" alt="<%= alt %>">
+		</figure>
+		<span><%= alt %></span>
+		<p class="p-content__mask u-desktop"></p> 
+	</a>
+</li>
+<% } else { %>
+	<!-- ここに下層ページの記述（aタグいらない、他にも何かあれば） -->
+<% } %>
