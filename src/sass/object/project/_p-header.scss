@@ -7,4 +7,10 @@
 .p-header__inner {
 	max-width: $l-inner;
 	width: 100%;
+
+	@include mq('md') {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }

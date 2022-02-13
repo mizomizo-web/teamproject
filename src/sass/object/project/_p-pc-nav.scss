@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.p-pc-nav {
+	display: none;
+
+	@include mq('md') {
+		display: block;
+		height: inherit;
+	}
+}
+
+.p-pc-nav__items {
+	display: flex;
+
+	@include mq('md') {
+		height: inherit;
+	}
+}
+
+.p-pc-nav__item {
+	height: inherit;
+	color: $white;
+}
+
+.p-pc-nav__item a {
+	display: flex;
+	align-items: center;
+	height: inherit;
+	line-height: 2.1875;
+	letter-spacing: 0.125em;
+}
+
+.p-pc-nav__item a {
+	padding-left: rem(16);
+	padding-right: rem(16);
+	position: relative;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a {
+	padding: 0;
+}
+
+.p-pc-nav__item--white {
+	padding-left: rem(32);
+	padding-right: rem(32);
+	color: $gray;
+	background-color: $white;
+}
+
+.p-pc-nav__item a:hover::after {
+	content: "";
+	position: absolute;
+	bottom: rem(8);
+	left: 0;
+	right: 0;
+	width: calc(100% - 15px * 2);
+	margin: auto;
+	height: rem(1);
+	background-color: #FFEA2E;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a::after {
+	visibility: hidden;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white:hover {
+	color: $white;
+	background-color: #333;
+}
