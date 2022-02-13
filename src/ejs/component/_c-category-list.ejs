@@ -1,16 +1,14 @@
-<div class="c-category-list p-category-list">
-  <ul class="p-category-list__items">
-    <li class="p-category-list__item">
-      <a class="p-category-list__link is-active" href="">all</a>
-    </li>
-    <li class="p-category-list__item">
-      <a class="p-category-list__link" href="">カテゴリ１</a>
-    </li>
-    <li class="p-category-list__item">
-      <a class="p-category-list__link" href="">カテゴリカテゴリ</a>
-    </li>
-    <li class="p-category-list__item">
-      <a class="p-category-list__link" href="">カテ</a>
-    </li>
-  </ul>
-</div>
+<% const categoryItem = [
+  {category:"カテゴリ１" },
+  {category:"カテゴリカテゴリ" },
+  {category:"カテ" },
+] %>
+
+<ul class="c-category-list p-category-list p-category-list__items">
+  <li class="c-category-item p-category-list__item">
+    <a class="c-category-item__link is-active" href="#!">all</a>
+  </li>
+  <% for (var item of categoryItem) {%>
+    <%- include('./_c-category-item',{category:item.category}) %>
+  <% } %>
+</ul>
