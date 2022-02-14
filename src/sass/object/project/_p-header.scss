@@ -5,6 +5,8 @@
 }
 
 .p-header__inner {
+	display: flex;
+	align-items: center;
 	max-width: $l-inner;
 	width: 100%;
 
