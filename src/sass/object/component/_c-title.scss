@@ -20,6 +20,11 @@
 }
 
 .c-title__en {
+  content: "";
+  position: absolute;
+  top: -47px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: $second-font-family;
   font-size: rem(50);
   font-weight: $normal;
@@ -31,6 +36,8 @@
   text-transform: capitalize;
 
   @include mq(md) {
+    top: rem(-85);
+    left: 26%;
     font-size: rem(110);
     line-height: calc(158/110);
     letter-spacing: 0.0182em;
