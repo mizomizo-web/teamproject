@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('./common/_head') %>
+  <body>
+    <!-- ヘッダー -->
+    <%- include('./project/_p-header') %>
+
+    <!-- ページネーション -->
+    <%- include('./component/_c-pagination') %>
+		
+		<form class="p-sub-contact" id="js-form" action="">
+			<dl class="p-sub-contact__list">
+				<div class="p-sub-contact__item">
+					<dt class="p-sub-contact__label">
+						<label for="company-name">※会社名</label>
+					</dt>
+					<dd class="p-sub-contact__input">
+						<input type="text" name="" id="company-name" placeholder="テキストがはいります" required />
+					</dd>
+				</div>
+				<div class="p-sub-contact__item">
+					<dt class="p-sub-contact__label">
+						<label for="your-name">※お名前</label>
+					</dt>
+					<dd class="p-sub-contact__input">
+						<input type="text" name="" id="your-name" placeholder="テキストがはいります" required />
+					</dd>
+				</div>
+				<div class="p-sub-contact__item">
+					<dt class="p-sub-contact__label">
+						<label for="kana">※ふりがな</label>
+					</dt>
+					<dd class="p-sub-contact__input">
+						<input type="text" name="" id="kana" placeholder="テキストがはいります" required />
+					</dd>
+				</div>
+				<div class="p-sub-contact__item">
+					<dt class="p-sub-contact__label">
+						<label for="email">メールアドレス</label>
+					</dt>
+					<dd class="p-sub-contact__input">
+						<input type="text" name="" id="email" placeholder="テキストがはいります" required />
+					</dd>
+				</div>
+				<div class="p-sub-contact__item">
+					<dt class="p-sub-contact__label">
+						<label for="your-massage">お問い合わせ内容</label>
+					</dt>
+					<dd class="p-sub-contact__input">
+						<textarea type="text" name="" id="your-massage" placeholder="テキストがはいります" required></textarea>
+					</dd>
+				</div>
+			</dl>
+			<button id="js-submit" class="p-sub-contact__submit c-btn c-btn--white" type="submit" disabled>送信</button>
+		</form>
+    <!-- フッター -->
+    <%- include('./project/_p-footer') %>
+
+    <!-- ページトップ -->
+    <%- include('./component/_c-pagetop') %>
+  </body>
+</html>
