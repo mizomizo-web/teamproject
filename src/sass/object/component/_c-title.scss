@@ -20,11 +20,6 @@
 }
 
 .c-title__en {
-  content: "";
-  position: absolute;
-  top: rem(-48);
-  left: 50%;
-  transform: translateX(-50%);
   font-family: $second-font-family;
   font-size: rem(50);
   font-weight: $normal;
@@ -36,8 +31,6 @@
   text-transform: capitalize;
 
   @include mq(md) {
-    top: rem(-84);
-    left: 27%;
     font-size: rem(110);
     line-height: calc(158/110);
     letter-spacing: 0.0182em;
@@ -45,13 +38,27 @@
 }
 
 .c-title__en--left {
-  @include mq(md) {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .c-title__en--right {
   @include mq(md) {
     text-align: right;
+  }
+}
+
+.c-title__en--contact {
+  position: absolute;
+  content: "";
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include mq('md') {
+    top: rem(-48);
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(-84);
+    left: 27%;
   }
 }
