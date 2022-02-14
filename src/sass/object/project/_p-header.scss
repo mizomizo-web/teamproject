@@ -5,12 +5,12 @@
 }
 
 .p-header__inner {
+	display: flex;
+	align-items: center;
 	max-width: $l-inner;
 	width: 100%;
 
 	@include mq('md') {
-		display: flex;
-		align-items: center;
 		justify-content: space-between;
 	}
 }
