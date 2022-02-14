@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .c-title {
-  
+  position: relative;
 }
 
 .c-title__ja {
@@ -22,6 +22,7 @@
 .c-title__en {
   font-family: $second-font-family;
   font-size: rem(50);
+  font-weight: $normal;
   line-height: calc(72/50);
   letter-spacing: 0.04em;
   color: $yellow;
@@ -37,13 +38,27 @@
 }
 
 .c-title__en--left {
-  @include mq(md) {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .c-title__en--right {
   @include mq(md) {
     text-align: right;
+  }
+}
+
+.c-title__en--contact {
+  position: absolute;
+  content: "";
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include mq('md') {
+    top: rem(-48);
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(-84);
+    left: 27%;
   }
 }
