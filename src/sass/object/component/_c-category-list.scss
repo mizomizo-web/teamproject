@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-category-list__items {
+.c-category-list__items {
   display: flex;
   flex-wrap: wrap;
   margin: rem(-16) 0 0 rem(-24);
@@ -10,7 +10,7 @@
   }
 }
 
-.p-category-list__item {
+.c-category-list__item {
   margin-top: rem(16);
   margin-left: rem(24);
 
