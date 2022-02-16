@@ -61,6 +61,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-
+  $(".js-category-item__link").on("click", function() {
+    $(".c-category-item__link").removeClass("is-active");
+    $(this).addClass("is-active");
+  });
 
 });
