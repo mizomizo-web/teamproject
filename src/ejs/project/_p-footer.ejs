@@ -1,9 +1,15 @@
 <footer class="p-footer">
   <div class="p-footer__inner l-inner">
     <div class="p-footer__wrap">
-      <%- include('../component/_c-logo') %>
-      <%- include('../project/_p-footer-nav') %>
+      <div class="p-footer__logo">
+        <%- include('../component/_c-logo') %>
+      </div>
+      <div class="p-footer__nav">
+        <%- include('../project/_p-footer-nav') %>
+      </div>
     </div>
-    <%- include('../project/_p-copyright') %>
+    <div class="p-footer__copyright">
+      <%- include('../project/_p-copyright') %>
+    </div>
   </div>
 </footer>
