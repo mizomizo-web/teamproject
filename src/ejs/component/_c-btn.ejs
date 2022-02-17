@@ -1,1 +1,23 @@
-<a href="<%= link %>" class="c-btn <%= "c-btn--" + modifier %>"><%= text %></a>
+<%# 該当箇所に以下を記述 %>
+
+<%# TOPページのお知らせボタン %>
+<%#- include('./component/_c-btn',{link:'', text:'すべて見る', bgColor:'white', size:'small'}) %>
+
+<%# お問い合わせページの送信ボタン %>
+<%#- include('./component/_c-btn',{link:'', text:'送信', bgColor:'white', size:''}) %>
+
+<%# TOPページのお知らせボタン %>
+<%#- include('./component/_c-btn',{link:'', text:'詳しく見る', bgColor:'gray', size:''}) %>
+
+<%# 大きさ小・背景色が白（TOPページのお知らせボタン） %>
+<% if (bgColor == 'white' && size == 'small') { %>
+  <a href="<%= link %>" class="c-btn c-btn--small c-btn--white"><%= text %></a>
+<%# 大きさ共通・背景色が白（お問い合わせページの送信ボタン） %>
+<% } else if (bgColor == 'white') { %>
+  <a href="<%= link %>" class="c-btn c-btn--default c-btn--white"><%= text %></a>
+<%# 大きさ共通・背景色がグレー（メインボタン） %>
+<% } else if (bgColor == 'gray') { %>
+  <a href="<%= link %>" class="c-btn c-btn--default c-btn--gray"><%= text %></a>
+  <% } else { %>
+  <a href="<%= link %>" class="c-btn c-btn--default"><%= text %></a>
+<% } %>
