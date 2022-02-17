@@ -11,8 +11,10 @@
   {datetime:"2020-07-20", time:"2020.07.20", category:"カテゴリ", title:"記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。" },
 ] %>
 
-<ul class="p-news-items p-sub-news__items">
+<ul class="p-news-list">
   <% for (var item of newsItem) {%>
-    <%- include('./_p-news-item',{datetime:item.datetime, time:item.time, category:item.category, title:item.title}) %>
+    <div class="p-news-list__item">
+      <%- include('./_p-news-item',{datetime:item.datetime, time:item.time, category:item.category, title:item.title}) %>
+    </div>
   <% } %>
 </ul>

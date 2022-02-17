@@ -1,10 +1,6 @@
 @use "global" as *;
 
 .p-news-item {
-  // & + & {
-  //   margin-top: rem(32);
-  // }
-
   @include mq(md) {
     display: flex;
     align-items: baseline;
