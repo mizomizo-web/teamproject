@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.c-pagination-prev-next {
+  // 親要素のElementで余白を付与
+  // margin: rem(80) auto 0;
+  max-width: rem(332);
+  width: 100%;
+  @include mq('md') {
+    // margin: rem(104) auto 0;
+  }
+}
+
+.c-pagination-prev-next__items {
+  display: flex;
+}
+
+.c-pagination-prev-next__item {
+  color: $white;
+}
+
+.c-pagination-prev-next__item:nth-child(2),
+.c-pagination-prev-next__item:last-child {
+  margin-left: rem(48);
+}
+
+.c-pagination-prev-next__prevlink,
+.c-pagination-prev-next__nextlink,
+.c-pagination-prev-next__link {
+  display: block;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+  border: 1px solid $white;
+  transition: background-color 0.3s, color 0.3s;
+  
+  @include mq(md) {
+    &:hover {
+      background-color: $white;
+      color: $gray;
+    }
+  }
+}
+
+.c-pagination-prev-next__prevlink,
+.c-pagination-prev-next__nextlink {
+	padding: 0 rem(11);
+}
+
+.c-pagination-prev-next__link {
+  padding: 0 rem(17);
+}
