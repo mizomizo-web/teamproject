@@ -1,23 +1,23 @@
 <%# 該当箇所に以下を記述 %>
 
-<%# TOPページのお知らせボタン %>
-<%#- include('./component/_c-btn',{link:'', text:'すべて見る', bgColor:'white', size:'small'}) %>
+<%# メインボタン %>
+<%#- include('./component/_c-btn',{link:'', text:'詳しく見る', bgColor:'gray', location:''}) %>
 
 <%# お問い合わせページの送信ボタン %>
-<%#- include('./component/_c-btn',{link:'', text:'送信', bgColor:'white', size:''}) %>
+<%#- include('./component/_c-btn',{link:'', text:'送信', bgColor:'white', location:''}) %>
 
 <%# TOPページのお知らせボタン %>
-<%#- include('./component/_c-btn',{link:'', text:'詳しく見る', bgColor:'gray', size:''}) %>
+<%#- include('./component/_c-btn',{link:'', text:'すべて見る', bgColor:'', location:'top-news'}) %>
 
-<%# 大きさ小・背景色が白（TOPページのお知らせボタン） %>
-<% if (bgColor == 'white' && size == 'small') { %>
-  <a href="<%= link %>" class="c-btn c-btn--small c-btn--white"><%= text %></a>
+
+
+<%# 大きさ共通・背景色がグレー（メインボタン） %>
+<% if (bgColor == 'gray') { %>
+  <a href="<%= link %>" class="c-btn c-btn--default c-btn--gray"><%= text %></a>
 <%# 大きさ共通・背景色が白（お問い合わせページの送信ボタン） %>
 <% } else if (bgColor == 'white') { %>
   <a href="<%= link %>" class="c-btn c-btn--default c-btn--white"><%= text %></a>
-<%# 大きさ共通・背景色がグレー（メインボタン） %>
-<% } else if (bgColor == 'gray') { %>
-  <a href="<%= link %>" class="c-btn c-btn--default c-btn--gray"><%= text %></a>
-  <% } else { %>
-  <a href="<%= link %>" class="c-btn c-btn--default"><%= text %></a>
+<%# SP時背景グレー＆サイズ通常・PC時背景白＆サイズ小（TOPページのニュースボタン） %>
+<% } else if (location == 'top-news') { %>
+  <a href="<%= link %>" class="c-btn c-btn--top-news"><%= text %></a>
 <% } %>
