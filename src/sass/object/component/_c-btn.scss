@@ -56,13 +56,15 @@
   background-color: $gray;
   border: 1px solid $white;
   color: $white;
-
-  &:hover {
-    color: $gray;
-  }
-
-  &::before {
-    background-color: $white;
+  
+  @include mq(md) {
+    &:hover {
+      color: $gray;
+    }
+  
+    &::before {
+      background-color: $white;
+    }
   }
 }
 
@@ -71,20 +73,45 @@
   color: #000;
   background-color: $white;
   
-  &:hover {
-    color: $white;
-  }
-  
-  &::before {
-    background-color: $gray;
+  @include mq(md) {
+    &:hover {
+      color: $white;
+    }
+    
+    &::before {
+      background-color: $gray;
+    }
   }
 }
 
-// サイズ小（PCのみ）
-.c-btn--small {
+// SP時背景グレー＆サイズ通常・PC時背景白＆サイズ小
+.c-btn--top-news {
+  background-color: $gray;
+  border: 1px solid $white;
+  color: $white;
+  font-size: rem(20);
+  line-height: calc(29/20);
+  letter-spacing: 0.1em;
+  padding: rem(10) 0;
+  max-width: rem(360);
+  
   @include mq(md) {
+    color: #000;
+    background-color: $white;
+    border: none;
     font-weight: $medium;
+    font-size: rem(16);
+    line-height: calc(23/16);
+    letter-spacing: initial;
     padding: rem(5) 0;
     max-width: rem(134);
+    
+    &:hover {
+      color: $white;
+    }
+    
+    &::before {
+      background-color: $gray;
+    }
   }
 }
