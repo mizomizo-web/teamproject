@@ -1,18 +1,5 @@
 @use "global" as *;
 
-.p-top-content {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.p-top-contents__item {
-	width: 50%;
-
-	@include mq('md') {
-		width: 25%;
-	}
-}
-
 .p-content__link {
 	display: block;
 	position: relative;

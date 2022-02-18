@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.p-contents {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.p-contents__item {
+	width: 50%;
+
+	@include mq('md') {
+		width: 25%;
+	}
+}

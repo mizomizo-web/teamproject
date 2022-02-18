@@ -16,9 +16,9 @@
 <% if (page.page_id == 'single-works') { %>
   <ul class="p-related-work-cards">
     <% for (var item of cardItem) {%>
-      <div class="p-related-work-cards__item">
+      <li class="p-related-work-cards__item">
         <%- include('./_p-work-card',{src:item.src, alt:item.alt, title:item.title, excerpt:item.excerpt, category:item.category, datetime:item.datetime, time:item.time}) %>
-      </div>
+      </li>
     <% } %>
   </ul>
 <% } %>
