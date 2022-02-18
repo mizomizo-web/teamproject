@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.p-sub-contents__item {
+  & + & {
+    margin-top: rem(48);
+
+    @include mq(md) {
+      margin-top: rem(104);
+    }
+  }
+
+  &:nth-child(2n) .p-sub-content {
+    flex-direction: row-reverse;
+    
+    .p-sub-content__img {
+      margin-left: rem(40);
+    }
+    
+    .p-sub-content__info {
+      width: calc(50% - #{rem(40)});
+    }
+  }
+
+  &:nth-child(2n+1) .p-sub-content {
+    .p-sub-content__info {
+      margin-left: rem(30);
+      width: calc(50% - #{rem(30)} - #{rem(10)}); // 右側にインナー幅と10px空きあり
+    }
+  }
+}
