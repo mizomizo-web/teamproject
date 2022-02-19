@@ -8,33 +8,39 @@
 
 
 
-<div class="c-breadcrumb p-breadcrumb">
-	<ol class="p-breadcrumb__lists" itemscope itemtype="https://schema.org/BreadcrumbList">
-		<!-- 1つめ -->
-		<li class="p-breadcrumb__list" itemprop="itemListElement" itemscope
+<div class="c-breadcrumb">
+	<ol class="c-breadcrumb__lists" itemscope itemtype="https://schema.org/BreadcrumbList">
+		<!-- トップ -->
+		<li class="c-breadcrumb__list" itemprop="itemListElement" itemscope
 				itemtype="https://schema.org/ListItem">
 			<a itemprop="item" href="index.html">
-					<span itemprop="name">トップ</span>
+				<span itemprop="name">トップ</span>
 			</a>
 			<meta itemprop="position" content="1" />
 		</li>
 	
-		<!-- 2つめ -->
-		<li class="p-breadcrumb__list" itemprop="itemListElement" itemscope
-				itemtype="https://schema.org/ListItem">
-			<a itemprop="item" href="<%= src %>">
-					<span class="p-breadcrumb__level" itemprop="name"><%= categoryName %></span>
-			</a>
-			<meta itemprop="position" content="2" />
-		</li>
-
-		<!-- 3つめ -->
+		<!-- 一覧ページ -->
 		<% if (postName !== '') { %>
-		<li class="p-breadcrumb__list" itemprop="itemListElement" itemscope
+			<li class="c-breadcrumb__list" itemprop="itemListElement" itemscope
+					itemtype="https://schema.org/ListItem">
+				<a itemprop="item" href="<%= src %>">
+					<span class="c-breadcrumb__level" itemprop="name"><%= categoryName %></span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+		<% } else { %>
+			<li class="c-breadcrumb__list" itemprop="itemListElement" itemscope
+			itemtype="https://schema.org/ListItem">
+				<span class="c-breadcrumb__level" itemprop="name"><%= categoryName %></span>
+				<meta itemprop="position" content="2" />
+			</li>
+		<% } %>
+
+		<!-- 詳細ページ -->
+		<% if (postName !== '') { %>
+		<li class="c-breadcrumb__list" itemprop="itemListElement" itemscope
 				itemtype="https://schema.org/ListItem">
-			<a itemprop="item" href="#">
-					<span class="p-breadcrumb__level" itemprop="name"><%= postName %></span>
-			</a>
+			<span class="c-breadcrumb__level" itemprop="name"><%= postName %></span>
 			<meta itemprop="position" content="3" />
 		</li>
 		<% } %>

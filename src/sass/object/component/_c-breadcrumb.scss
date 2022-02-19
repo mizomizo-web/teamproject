@@ -1,14 +1,18 @@
 @use "global" as *;
 
-.p-breadcrumb {
+.c-breadcrumb {
 	color: $white;
 }
 
-.p-breadcrumb__lists {
+.c-breadcrumb__lists {
 	display: flex;
 }
 
-.p-breadcrumb__level::before {
+.c-breadcrumb__level {
+	display: block;
+}
+
+.c-breadcrumb__level::before {
 	position: relative;
 	content: ">";
 	padding: 0 rem(5);
