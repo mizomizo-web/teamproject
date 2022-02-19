@@ -1,0 +1,70 @@
+<%# 以下を該当箇所に記述 %>
+<%#- include('./project/_p-sub-fv', {page: location}) %>
+
+<% 
+  imagePath = "./images";
+%>
+
+<div class="p-sub-fv">
+  <% if (page.page_id == 'news') { %>
+    <div class="p-sub-fv__content">
+      <div class="p-sub-fv__img">
+        <picture>
+          <source srcset="<%= imagePath %>/news/fv-news-pc.jpg" media="(min-width: 768px)" />
+          <img src="<%= imagePath %>/news/fv-news-sp.jpg" alt="お知らせ" />
+        </picture>
+      </div>
+      <h1 class="p-sub-fv__title">お知らせ</h1>
+    </div>
+  <% } else if (page.page_id == 'content') {%> 
+    <div class="p-sub-fv__content">
+      <div class="p-sub-fv__img">
+        <picture>
+          <source srcset="<%= imagePath %>/content/fv-content-pc.jpg" media="(min-width: 768px)" />
+          <img src="<%= imagePath %>/content/fv-content-sp.jpg" alt="事業内容" />
+        </picture>  
+      </div>
+      <h1 class="p-sub-fv__title">事業内容</h1>
+    </div>
+  <% } else if (page.page_id == 'works') {%> 
+    <div class="p-sub-fv__content">
+      <div class="p-sub-fv__img">
+        <picture>
+          <source srcset="<%= imagePath %>/work/fv-work-pc.jpg" media="(min-width: 768px)" />
+          <img src="<%= imagePath %>/work/fv-work-sp.jpg" alt="制作実績" />
+        </picture>  
+      </div>
+      <h1 class="p-sub-fv__title">制作実績</h1>
+    </div>
+  <% } else if (page.page_id == 'overview') {%>
+    <div class="p-sub-fv__content">
+      <div class="p-sub-fv__img">
+        <picture>
+          <source srcset="<%= imagePath %>/overview/fv-overview-pc.jpg" media="(min-width: 768px)" />
+          <img src="<%= imagePath %>/overview/fv-overview-sp.jpg" alt="企業概要" />
+        </picture>  
+      </div>
+      <h1 class="p-sub-fv__title">企業概要</h1>
+    </div>    
+  <% } else if (page.page_id == 'blog') {%> 
+    <div class="p-sub-fv__content">
+      <div class="p-sub-fv__img">
+        <picture>
+          <source srcset="<%= imagePath %>/blog/fv-blog-pc.jpg" media="(min-width: 768px)" />
+          <img src="<%= imagePath %>/blog/fv-blog-sp.jpg" alt="ブログ" />
+        </picture>
+      </div>
+      <h1 class="p-sub-fv__title">ブログ</h1>
+    </div>     
+  <% } else if (page.page_id == 'contact') {%> 
+    <div class="p-sub-fv__content">
+      <div class="p-sub-fv__img">
+        <picture>
+          <source srcset="<%= imagePath %>/contact/fv-contact-pc.jpg" media="(min-width: 768px)" />
+          <img src="<%= imagePath %>/contact/fv-contact-sp.jpg" alt="お問い合わせ" />
+        </picture>
+      </div>
+      <h1 class="p-sub-fv__title">お問い合わせ</h1>
+    </div>
+  <% } %>
+</div>
