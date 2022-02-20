@@ -4,12 +4,9 @@
   position: relative;
 }
 
-.sp-slide-image1,
-.sp-slide-image2,
-.sp-slide-image3,
-.pc-slide-image1,
-.pc-slide-image2,
-.pc-slide-image3 {
+.slide-image1,
+.slide-image2,
+.slide-image3 {
 	width: 100%;
   height: 100vh;
   background-size: cover;
@@ -17,28 +14,28 @@
   background-repeat: no-repeat;
 }
 
-.sp-slide-image1 {
+.slide-image1 {
 	background-image: url(../images/top/mv01-sp.jpg);
+
+  @include mq('md') {
+    background-image: url(../images/top/mv01-pc.jpg);
+  }
 }
 
-.sp-slide-image2 {
+.slide-image2 {
 	background-image: url(../images/top/mv02-sp.jpg);
+
+  @include mq('md') {
+    background-image: url(../images/top/mv02-pc.jpg);
+  }
 }
 
-.sp-slide-image3 {
+.slide-image3 {
 	background-image: url(../images/top/mv03-sp.jpg);
-}
 
-.pc-slide-image1 {
-	background-image: url(../images/top/mv01-pc.jpg);
-}
-
-.pc-slide-image2 {
-	background-image: url(../images/top/mv02-pc.jpg);
-}
-
-.pc-slide-image3 {
-	background-image: url(../images/top/mv03-pc.jpg);
+  @include mq('md') {
+    background-image: url(../images/top/mv03-pc.jpg);
+  }
 }
 
 .slide-content {
@@ -84,25 +81,14 @@
   }
 }
 
-.swiper-slide-active .sp-slide-image1,
-.swiper-slide-duplicate-active .sp-slide-image1,
-.swiper-slide-prev .sp-slide-image1,
-.swiper-slide-active .sp-slide-image2,
-.swiper-slide-duplicate-active .sp-slide-image2,
-.swiper-slide-prev .sp-slide-image2,
-.swiper-slide-active .sp-slide-image3,
-.swiper-slide-duplicate-active .sp-slide-image3,
-.swiper-slide-prev .sp-slide-image3 {
-  animation: zoomUp 10s linear 0s 1 normal both;
-}
-.swiper-slide-active .pc-slide-image1,
-.swiper-slide-duplicate-active .pc-slide-image1,
-.swiper-slide-prev .pc-slide-image1,
-.swiper-slide-active .pc-slide-image2,
-.swiper-slide-duplicate-active .pc-slide-image2,
-.swiper-slide-prev .pc-slide-image2,
-.swiper-slide-active .pc-slide-image3,
-.swiper-slide-duplicate-active .pc-slide-image3,
-.swiper-slide-prev .pc-slide-image3 {
+.swiper-slide-active .slide-image1,
+.swiper-slide-duplicate-active .slide-image1,
+.swiper-slide-prev .slide-image1,
+.swiper-slide-active .slide-image2,
+.swiper-slide-duplicate-active .slide-image2,
+.swiper-slide-prev .slide-image2,
+.swiper-slide-active .slide-image3,
+.swiper-slide-duplicate-active .slide-image3,
+.swiper-slide-prev .slide-image3 {
   animation: zoomUp 10s linear 0s 1 normal both;
 }
