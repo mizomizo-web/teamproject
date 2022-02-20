@@ -1,51 +1,46 @@
 @use "global" as *;
 
-.p-sub-content {
+.p-sub-content__items {
+  margin-top: rem(60);
+
   @include mq(md) {
-    display: flex;
+    margin-top: rem(150);
   }
 }
 
-.p-sub-content__img {
-  // インナー幅を超えて表示
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  @include mq(md) {
-    width: 50%;
-    margin: initial;
-  }
-}
-
-.p-sub-content__info {
+.p-sub-content__head {
   color: $white;
+  margin-top: rem(105);
+  
+  @include mq(md) {
+    margin: rem(69) auto 0;
+    width: 100%;
+    max-width: rem(570);
+  }
 }
 
-.p-sub-content__name {
+.p-sub-content__title {
   font-weight: $normal;
   font-size: rem(20);
   line-height: calc(29/20);
   letter-spacing: 0.1em;
   text-align: center;
-  margin-top: rem(24);
-
+  
   @include mq(md) {
     font-size: rem(25);
-    line-height: 1;
-    letter-spacing: 0.02em;
-    text-align: left;
-    margin-top: rem(20);
+    line-height: calc(35/25);
+    letter-spacing: 0.08em;
   }
 }
 
-.p-sub-content__text {
-  margin-top: rem(24);
+.p-sub-content__description {
+  font-size: rem(16);
+  line-height: calc(23/16);
   letter-spacing: 0.125em;
-  
+  margin-top: rem(24);
+
   @include mq(md) {
-    margin-top: rem(40);
     line-height: calc(35/16);
-    letter-spacing: 0.03125em;
+    text-align: center;
   }
 }
