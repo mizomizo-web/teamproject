@@ -5,15 +5,14 @@
 
 	@include mq('md') {
 		display: block;
-		height: inherit;
 	}
 }
 
 .p-pc-nav__items {
 	display: flex;
+	height: rem(50);
 
 	@include mq('md') {
-		height: inherit;
 	}
 }
 

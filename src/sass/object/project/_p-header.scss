@@ -2,15 +2,31 @@
 
 .p-header {
 	height: rem(50);
+	background-color: rgba(17, 17, 17, 0.5);
 }
 
 .p-header__inner {
 	display: flex;
 	align-items: center;
-	max-width: $l-inner;
 	width: 100%;
+	height: inherit;
 
 	@include mq('md') {
 		justify-content: space-between;
 	}
+}
+
+.p-header__logo {
+	width: rem(70);
+	height: inherit;
+	margin-left: rem(22);
+
+	@include mq('md') {
+		width: rem(94);
+		margin-left: rem(32);
+	}
+}
+
+.p-header__nav {
+	height: inherit;
 }
