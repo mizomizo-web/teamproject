@@ -6,11 +6,13 @@
 	}
 }
 
-.c-logo a img {
-	width: rem(70);
-	height: rem(39);
-	@include mq('md') {
-		width: rem(94);
-		height: rem(25);
-	}
+.c-logo {
+	display: flex;
+	align-items: center;
+	height: inherit;
+
+}
+
+.c-logo img {
+
 }
