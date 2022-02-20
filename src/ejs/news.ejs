@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<%-include('./component/_c-breadcrumb',{
-	categoryName:'お知らせ',
-	postName:'',
-	src:'news.html'
-	})
-%>
 <html lang="ja">
   <%- include('./common/_head') %>
   <body>
+    <% var location = {page_id:'news'} %>
+
     <!-- ヘッダー -->
     <%- include('./project/_p-header') %>
 
-    <!-- ページネーション -->
-    <%- include('./component/_c-pagination') %>
+    <!-- 下層ファーストビュー -->
+    <%- include('./project/_p-sub-fv', {page: location}) %>
+    
+    <!-- お知らせセクション -->
+    <section class="p-sub-news l-sub-news">
+      <div class="p-sub-news__inner">
+        <!-- パンくずリスト -->
+        <div class="p-sub-news__breadcrumb">
+          <%-include('./component/_c-breadcrumb',{
+            categoryName:'お知らせ',
+            postName:'',
+            src:'news.html'
+            })
+          %>
+        </div>
+        <!-- お知らせリスト -->
+        <div class="p-sub-news__items">
+          <%- include('./project/_p-news-list') %>
+        </div>
+        <!-- ページネーション -->
+        <div class="p-sub-news__pagination">
+          <%- include('./component/_c-pagination') %>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="l-common-contact">
+      <%- include('./project/_p-common-contact') %>
+    </section>
 
     <!-- フッター -->
     <%- include('./project/_p-footer') %>
