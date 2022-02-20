@@ -15,7 +15,9 @@
 ] %>
 
 <ul class="p-related-blog-cards">
-  <% for (var item of cardItem) {%>
-    <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
-  <% } %>
+  <div class="p-related-blog-cards__list">
+    <% for (var item of cardItem) {%>
+      <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
+    <% } %>
+  </div>
 </ul>
