@@ -3,10 +3,7 @@
 .c-pagination {
 	max-width: rem(332);
 	width: 100%;
-	margin: rem(80) auto 0;
-	@include mq('md') {
-		margin: rem(104) auto 0;
-	}
+	margin: 0 auto;
 }
 
 .c-pagination__lists {
