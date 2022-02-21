@@ -62,10 +62,10 @@
   transform: translateX(-50%);
 
   @include mq('md') {
-    top: rem(-48);
+    top: rem(-94);
     left: 50%;
     transform: translateX(-50%);
     top: rem(-84);
-    left: 27%;
+    left: rem(214);
   }
 }
