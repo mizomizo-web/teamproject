@@ -22,7 +22,7 @@
 .c-title__en {
   content: "";
   position: absolute;
-  top: -47px;
+  top: rem(-47);
   left: 50%;
   transform: translateX(-50%);
   font-family: $second-font-family;
@@ -32,12 +32,10 @@
   letter-spacing: 0.04em;
   color: $yellow;
   opacity: 0.2;
-  text-align: center;
   text-transform: capitalize;
 
   @include mq(md) {
-    top: rem(-85);
-    left: 26%;
+    top: rem(-44);
     font-size: rem(110);
     line-height: calc(158/110);
     letter-spacing: 0.0182em;
@@ -45,19 +43,24 @@
 }
 
 .c-title__en--left {
-  text-align: left;
+  @include mq(md) {
+    transform: initial;
+    left: rem(90);
+  }
 }
 
 .c-title__en--right {
   @include mq(md) {
-    text-align: right;
+    transform: initial;
+    left: initial;
+    right: rem(91);
   }
 }
 
 .c-title__en--contact {
   position: absolute;
   content: "";
-  top: -48px;
+  top: rem(-48);
   left: 50%;
   transform: translateX(-50%);
 
