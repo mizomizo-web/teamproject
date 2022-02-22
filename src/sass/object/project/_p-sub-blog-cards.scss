@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.p-sub-blog-cards__list {
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-sub-blog-cards__item {
+  & + & {
+    margin-top: rem(24);
+  }
+  
+  @include mq(md) {
+    width: calc(100%/3 - #{rem(24)}*2/3);
+    
+    & + & {
+      margin-top: initial;
+    }
+
+    &:not(:nth-child(3n+1)) {
+      margin-left: rem(24);
+    }
+
+    &:nth-child(n+4) {
+      margin-top: rem(48);
+    }
+  }
+}

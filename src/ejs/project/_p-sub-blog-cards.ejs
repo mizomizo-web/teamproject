@@ -14,10 +14,12 @@
   {category:"カテゴリ3", src:imagePath + "/blog/blog09.jpg", alt:"blog09", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" }
 ] %>
 
-<ul class="p-sub-blog-cards">
-  <div class="p-sub-blog-cards__item">
+<div class="p-sub-blog-cards">
+  <ul class="p-sub-blog-cards__list">
     <% for (var item of cardItem) {%>
-      <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
+      <li class="p-sub-blog-cards__item">
+        <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
+      </li>
     <% } %>
-  </div>
-</ul>
+  </ul>
+</div>
