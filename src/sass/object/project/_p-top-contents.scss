@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.p-top-content__inner {
+	padding-top: rem(50);
+
+	@include mq('md') {
+		padding-top: rem(45);
+	}
+}
+
+.p-top-contents__lists {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: rem(48);
+}
+
+.p-top-contents__item {
+	width: 50%;
+
+	@include mq('md') {
+		width: 25%;
+	}
+}
