@@ -15,7 +15,7 @@
 ] %>
 
 <ul class="p-top-blog-cards">
-  <div class="p-top-blog-cards">
+  <div class="p-top-blog-cards__list">
     <% for (var item of cardItem) {%>
       <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
     <% } %>
