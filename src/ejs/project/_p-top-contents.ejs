@@ -1,0 +1,38 @@
+<%
+  imagePath = "./images";
+%>
+
+<% const cardItem = [
+  {src:imagePath + "/top/content00.jpg", alt:"経営理念ページへ"},
+  {src:imagePath + "/top/content01.jpg", alt:"理念1へ"},
+  {src:imagePath + "/top/content02.jpg", alt:"理念2へ"},
+  {src:imagePath + "/top/content03.jpg", alt:"理念3へ"},
+] %>
+
+<%
+  var localmeta = {
+    jaTitle: '事業内容',
+    enTitle: 'Content',
+  };
+%>
+
+<%# 以下をindex.ejsに記述 %>
+<%# var location = {page_id:'top'} %>
+<%#- include('./project/_p-contents', {page: location}) %>
+
+<% if (page.page_id == 'top') { %>
+  <div class="p-top-contents">
+    <div class="p-top-contents__inner">
+      <div class="p-top-contents__title">
+        <%- include('../component/_c-title.ejs', {meta: localmeta}) %>
+      </div>
+      <ul class="p-top-contents__lists">
+        <% for (var item of cardItem) {%>
+          <li class="p-top-contents__item">
+            <%- include('./_p-content',{src:item.src, alt:item.alt}) %>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+<% } %>
