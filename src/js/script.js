@@ -81,4 +81,24 @@ jQuery(function ($) {
     },
     speed: 2000,
   });
+
+    // swiper2
+    var slider2 = new Swiper(".slider2", {
+      loop: true,
+      effect: "slide",
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 2000,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      }
+    });
 });
