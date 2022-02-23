@@ -29,7 +29,9 @@ jQuery(function ($) {
 
   // ヘッダー
   $(window).on("scroll", function () {
-    if ($(".slider1").height() < $(this).scrollTop()) {
+    if (
+      ($(".slider1").height() || $(".p-sub-fv").height()) < $(this).scrollTop()
+    ) {
       $(".p-header").css("background", "rgba(17,17,17,1)");
     } else {
       $(".p-header").css("background", "rgba(17,17,17,0.5)");
@@ -70,6 +72,16 @@ jQuery(function ($) {
     $(this).addClass("is-active");
   });
 
+  // ページ遷移時のヘッダー高さマイナス
+  $(window).on("load", function () {
+    let headerHeight = $(".p-header").outerHeight();
+    let urlHash = location.hash;
+    if (urlHash) {
+      let position = $(urlHash).offset().top - headerHeight;
+      $("html, body").animate({ scrollTop: position }, 0);
+    }
+  });
+
   // swiper mv
   // swiper1
   var slider1 = new Swiper(".slider1", {
@@ -82,23 +94,23 @@ jQuery(function ($) {
     speed: 2000,
   });
 
-    // swiper2
-    var slider2 = new Swiper(".slider2", {
-      loop: true,
-      effect: "slide",
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      speed: 2000,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
-      },
-      scrollbar: {
-        el: ".swiper-scrollbar",
-        hide: true,
-      }
-    });
+  // swiper2
+  var slider2 = new Swiper(".slider2", {
+    loop: true,
+    effect: "slide",
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    speed: 2000,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+    },
+  });
 });

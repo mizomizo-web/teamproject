@@ -3,10 +3,10 @@
 %>
 
 <% const cardItem = [
-  {src:imagePath + "/top/content00.jpg", alt:"経営理念ページへ"},
-  {src:imagePath + "/top/content01.jpg", alt:"理念1へ"},
-  {src:imagePath + "/top/content02.jpg", alt:"理念2へ"},
-  {src:imagePath + "/top/content03.jpg", alt:"理念3へ"},
+  {src:imagePath + "/top/content00.jpg", alt:"経営理念ページへ", id:""},
+  {src:imagePath + "/top/content01.jpg", alt:"理念1へ", id:"content01"},
+  {src:imagePath + "/top/content02.jpg", alt:"理念2へ", id:"content02"},
+  {src:imagePath + "/top/content03.jpg", alt:"理念3へ", id:"content03"},
 ] %>
 
 <%
@@ -29,7 +29,7 @@
       <ul class="p-top-contents__lists">
         <% for (var item of cardItem) {%>
           <li class="p-top-contents__item">
-            <%- include('./_p-content',{src:item.src, alt:item.alt}) %>
+            <%- include('./_p-content',{src:item.src, alt:item.alt, id:item.id}) %>
           </li>
         <% } %>
       </ul>
