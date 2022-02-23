@@ -143,8 +143,10 @@
 
 .p-top-work__button {
 	margin-top: rem(16);
-	
+	text-align: center;
+
 	@include mq('md') {
 		margin-top: rem(48);
+		text-align: left;
 	}
 }
