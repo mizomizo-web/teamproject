@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.p-single-blog {
+  color: $white;
+}
+
+.p-single-blog__inner {
+  margin: 0 auto;
+	max-width: rem(540);
+	width: 100%;
+	height: inherit;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	@include mq(md) {
+    max-width: rem(850);
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
+}
+
+.p-single-blog__article {
+  margin-top: rem(78);
+  @include mq(md) {
+    margin-top: rem(91);
+  }
+}
+
+.p-single-blog__pagination {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(104);
+  }
+}
