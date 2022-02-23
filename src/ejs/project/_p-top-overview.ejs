@@ -1,0 +1,28 @@
+<%
+  var localmeta = {
+    jaTitle: '企業概要',
+    enTitle: 'Overview',
+  };
+%>
+
+<div class="p-top-overview">
+	<div class="p-top-overview__inner">
+		<div class="p-top-overview__title">
+			<%- include('../component/_c-title.ejs', {meta: localmeta}) %>
+		</div>
+		<div class="p-top-overview__bg">
+			<div class="p-top-overview__wrapper">
+				<figure class="p-top-overview__img">
+					<img src="./images/top/overview01.jpg" alt="">
+				</figure>
+				<div class="p-top-overview__textbox">
+					<h3 class="p-top-overview__title">メインタイトルが入ります</h3>
+					<p class="p-top-overview__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+					<div class="p-top-overview__button">
+						<%- include('../component/_c-btn',{link:'work.html', text:'すべて見る', bgColor:'gray', location:''}) %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
