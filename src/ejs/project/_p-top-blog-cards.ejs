@@ -2,6 +2,13 @@
   imagePath = "./images";
 %>
 
+<%
+  var localmeta = {
+    jaTitle: 'ブログ',
+    enTitle: 'Blog',
+  };
+%>
+
 <% const cardItem = [
   {category:"カテゴリ1", src:imagePath + "/blog/blog01.jpg", alt:"blog01", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
   {category:"カテゴリ2", src:imagePath + "/blog/blog02.jpg", alt:"blog02", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" },
@@ -14,10 +21,21 @@
   // {category:"カテゴリ3", src:imagePath + "/blog/blog09.jpg", alt:"blog09", title:"タイトルが入ります。タイトルが入ります。", text:"説明文が入ります。説明文が入ります。説明文が入ります。", time:"2021.07.20" }
 ] %>
 
-<ul class="p-top-blog-cards">
-  <div class="p-top-blog-cards__list">
-    <% for (var item of cardItem) {%>
-      <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
-    <% } %>
+<div class="p-top-blog-cards">
+  <div class="p-top-blog-cards__inner l-inner">
+    <div class="p-top-blog-cards__title">
+			<%- include('../component/_c-title.ejs', {meta: localmeta}) %>
+		</div>
+    <ul class="p-top-blog-cards__list">
+      <% for (var item of cardItem) {%>
+        <li class="p-top-blog-cards__item">
+          <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
+        </li>
+      <% } %>
+    </ul>
+    <div class="p-top-blog-cards__button">
+      <%- include('../component/_c-btn',{link:'blog.html', text:'すべて見る', bgColor:'gray', location:''}) %>
+    </div>
+
   </div>
-</ul>
+</div>
