@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('./common/_head') %>
+  <body>
+    <% var location = {page_id:'single-blog'} %>
+
+    <!-- ヘッダー -->
+    <%- include('./project/_p-header') %>
+    
+    <!-- 記事コンテンツ -->
+    
+    <%- include('./component/_c-pagination-prev-next') %>
+    
+    <!-- 関連記事 -->
+    <div class="p-related-blog">
+      <div class="p-related-blog__title">
+        <%- include('./component/_c-related-card-title', {page: location}) %>
+      </div>
+      <div class="p-related-blog__items">
+        <%- include('./project/_p-related-blog-cards') %>
+      </div>
+    </div>
+
+    <!-- お問い合わせ -->
+    <section class="l-common-contact">
+      <%- include('./project/_p-common-contact') %>
+    </section>
+
+    <!-- フッター -->
+    <%- include('./project/_p-footer') %>
+
+    <!-- ページトップ -->
+    <%- include('./component/_c-pagetop') %>
+  </body>
+</html>
