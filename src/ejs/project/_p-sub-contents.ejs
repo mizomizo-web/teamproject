@@ -3,9 +3,9 @@
 %>
 
 <% const cardItem = [
-  {src:imagePath + "/content/sub-content01.jpg", alt:"経営理念ページへ" , name:"企業理念１", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。"},
-  {src:imagePath + "/content/sub-content02.jpg", alt:"経営理念ページへ" , name:"企業理念２", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。"},
-  {src:imagePath + "/content/sub-content03.jpg", alt:"経営理念ページへ" , name:"企業理念３", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。"},
+  {src:imagePath + "/content/sub-content01.jpg", alt:"経営理念ページへ" , name:"企業理念１", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。", id:"content01"},
+  {src:imagePath + "/content/sub-content02.jpg", alt:"経営理念ページへ" , name:"企業理念２", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。", id:"content02"},
+  {src:imagePath + "/content/sub-content03.jpg", alt:"経営理念ページへ" , name:"企業理念３", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。", id:"content03"},
 ] %>
 
 
@@ -13,7 +13,7 @@
   <ul class="p-sub-contents">
     <% for (var item of cardItem) {%>
       <li class="p-sub-contents__item">
-        <%- include('./_p-sub-content-card',{src:item.src, alt:item.alt, name:item.name, text:item.text}) %>
+        <%- include('./_p-sub-content-card',{src:item.src, alt:item.alt, name:item.name, text:item.text, id:item.id}) %>
       </li>
     <% } %>
   </ul>
