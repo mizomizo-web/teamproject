@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-top-content__inner {
+.p-top-contents__inner {
 	padding-top: rem(50);
 
 	@include mq('md') {
