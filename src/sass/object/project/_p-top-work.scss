@@ -9,7 +9,7 @@
 	margin: 0 auto;
 
 	@include mq('md') {
-
+		padding-top: rem(63);
 	}
 }
 
