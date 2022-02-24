@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.p-sub-overview-list__item {
+  list-style: none;
+  padding: rem(14) 0 rem(19);
+  border-bottom: 1px solid $white;
+}
