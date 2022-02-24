@@ -49,6 +49,12 @@
 	}
 }
 
+// 背景線SP
+.p-top-work__cont::before {
+	content: "";
+	position: absolute;
+}
+
 .slide-image4,
 .slide-image5,
 .slide-image6 {

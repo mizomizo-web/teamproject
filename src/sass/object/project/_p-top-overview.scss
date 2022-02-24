@@ -19,8 +19,7 @@
 .p-top-overview__bg {
 	@include mq('md') {
 		margin-top: rem(48);
-		background-color: $gray;
-		background-image: linear-gradient(90deg,#333 0%,#333 70%,#111 70%,#111 100%);
+		background-image: linear-gradient(90deg, #333 0%, #333 70%, transparent 70%, transparent 100%);
 		margin: rem(48) calc(50% - 50vw) 0;
 		width: 100vw;
 		padding: rem(80) rem(25);
