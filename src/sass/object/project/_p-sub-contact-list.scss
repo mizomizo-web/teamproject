@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-sub-contact__list {
+.p-sub-contact-list {
 	max-width: rem(540);
 	width: 100%;
 	margin: auto;
@@ -10,18 +10,18 @@
 	}
 }
 
-.p-sub-contact__item {
+.p-sub-contact-list__item {
 	@include mq('md') {
 		display: flex;
 		align-items: center;
 	}
 }
 
-.p-sub-contact__item + .p-sub-contact__item {
+.p-sub-contact-list__item + .p-sub-contact-list__item {
 	margin-top: rem(32);
 }
 
-.p-sub-contact__label {
+.p-sub-contact-list__label {
 	color: $white;
 
 	@include mq('md') {
@@ -32,7 +32,7 @@
 }
 
 
-.p-sub-contact__input {
+.p-sub-contact-list__input {
 	margin-top: rem(16);
 	background-color: $white;
 
@@ -43,7 +43,7 @@
 	}
 }
 
-.p-sub-contact__item:last-child {
+.p-sub-contact-list__item:last-child {
 	@include mq('md') {
 		display: flex;
 		align-items: start;
@@ -51,7 +51,7 @@
 	}
 }
 
-.p-sub-contact__input textarea {
+.p-sub-contact-list__input textarea {
 	height: rem(250);
 
 	@include mq('md') {
@@ -59,7 +59,7 @@
 	}
 }
 
-.p-sub-contact__submit {
+.p-sub-contact-list__submit {
 	display: block;
 	max-width: rem(360);
 	width: 100%;
