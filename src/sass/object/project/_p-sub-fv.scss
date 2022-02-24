@@ -26,6 +26,8 @@
   line-height: calc(43/30);
   letter-spacing: 0.067em;
   color: $white;
+  width: 100%;
+  text-align: center;
 
   @include mq(md) {
     font-size: rem(35);
