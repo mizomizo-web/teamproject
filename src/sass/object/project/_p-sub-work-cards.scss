@@ -7,14 +7,6 @@
   }
 }
 
-.p-sub-work-cards__inner {
-  padding-bottom: rem(120);
-
-  @include mq('md') {
-    padding-bottom: rem(150);
-  }
-}
-
 .p-sub-work-cards__list {
   margin-top: rem(16);
 
