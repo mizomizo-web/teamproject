@@ -1,10 +1,13 @@
 @use "global" as *;
 
-.p-related-work-cards {
+.p-related-work-cards__list {
+  margin-top: rem(32);
+
   @include mq(md) {
     display: flex;
     flex-wrap: wrap;
-  }  
+    margin-top: rem(80);
+  }
 }
 
 .p-related-work-cards__items {
