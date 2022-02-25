@@ -26,9 +26,31 @@
 }
 
 .p-top-blog-cards__item {
+	background-color: $white;
+	display: block;
 
 	@include mq('md') {
     width: calc(33.3333% - #{rem(25)}* 2 / 3);
+		display: flex;
+		transition: all 0.3s;
+	}
+}
+
+.p-top-blog-cards__item:hover {
+	@include mq('md') {
+		.p-blog-card__img img {
+			transform: scale(1.1);
+		}
+
+		.p-blog-card__textbox,
+		.p-blog-card__meta {
+			background-color: $gray;
+		}
+
+		.p-blog-card__textbox,
+		.p-blog-card__time {
+			color: $white;
+		}
 	}
 }
 
