@@ -1,6 +1,10 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
+  // スクロールバーを除いた幅を取得
+  let vw = document.body.clientWidth;
+  document.documentElement.style.setProperty('--vw', vw + 'px');
+
   var topBtn = $(".c-pagetop");
   topBtn.hide();
 
@@ -112,5 +116,18 @@ jQuery(function ($) {
       el: ".swiper-scrollbar",
       hide: true,
     },
+  });
+
+  // リサイズイベント
+  $(window).resize(function(){ 
+    var $window = $(this).width();
+    var bp = 767;
+    if($window > bp){
+    $(".js-hamburger").removeClass("is-active");
+    $(".js-nav-menu").fadeOut();
+    }else{
+    $(".p-sp-nav").hide();
+    $(".js-hamburger").removeClass("is-active");
+    }
   });
 });
