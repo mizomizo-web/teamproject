@@ -29,9 +29,9 @@
 		</div>
     <div class="p-top-blog-cards__list">
       <% for (var item of cardItem) {%>
-        <a class="p-top-blog-cards__item">
+        <div class="p-top-blog-cards__item">
           <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
-        </a>
+        </div>
       <% } %>
     </div>
     <div class="p-top-blog-cards__button">

@@ -2,7 +2,7 @@
 <%# var location = {page_id:'top'} %>
 <%#- include('./project/_p-top-blog-cards', {page: location}) %>
 
-<div class="p-blog-card">
+<a class="p-blog-card" href="single-blog.html">
     <figure class="p-blog-card__img">
       <img src="<%= src %>" alt="<%= alt %>" />
     </figure>
@@ -14,4 +14,4 @@
       <span class="p-blog-card__category"><%= category %></span>
       <time class="p-blog-card__time" datetime="2021-07-20"><%= time %></time>
     </div>
-</div>
+</a>
