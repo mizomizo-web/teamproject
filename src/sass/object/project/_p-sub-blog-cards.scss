@@ -8,6 +8,8 @@
 }
 
 .p-sub-blog-cards__item {
+  display: flex;
+  
   & + & {
     margin-top: rem(24);
   }
