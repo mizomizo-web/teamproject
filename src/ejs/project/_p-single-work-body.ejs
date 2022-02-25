@@ -1,0 +1,32 @@
+<div class="p-single-work">
+	<article class="p-single-work__article p-article">
+		<h1 class="p-single-work__title">〇〇株式会社　制作実績</h1>
+		<div class="p-article__info">
+			<time class="p-article__time" datetime="2021-06-13">2020/06/13</time>
+			<span class="p-article__category">カテゴリ1</span>
+		</div>
+	</article>
+	<div class="gallery">
+    <div class="swiper gallery-slider">
+        <!-- メイン -->
+        <div class="swiper-wrapper single-swiper-wrapper">
+					<% for (var i=1; i < 9; i++) { %>
+            <div class="swiper-slide single-swiper-slide"><img src="../../images/work/work0<%= i %>.jpg" alt="work0<%= i %>"></div>
+					<% } %>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <!-- サムネイル -->
+    <div class="swiper gallery-thumbs">
+			<div class="swiper-wrapper">
+				<% for (var i=1; i < 9; i++) { %>
+					<div class="swiper-slide"><img src="../../images/work/work0<%= i %>.jpg" alt="work0<%= i %>"></div>
+				<% } %>
+			</div>
+    </div>
+	</div>
+	<div class="p-single-work__textbox">
+		<%- include('../project/_p-single-work-details') %>
+	</div>
+</div>

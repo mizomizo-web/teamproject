@@ -118,6 +118,42 @@ jQuery(function ($) {
     },
   });
 
+  // single-swiper
+  //メイン
+  var slider = new Swiper ('.gallery-slider', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop: true,
+    loopedSlides: 8, //スライドの枚数と同じ値を指定
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+  });
+
+  //サムネイル
+  var thumbs = new Swiper ('.gallery-thumbs', {
+    slidesPerView: 'auto',
+    spaceBetween: 24,
+    centeredSlides : true,
+    autoplay: true,
+    speed: 1000,
+    loop: true,
+    slideToClickedSlide: true,
+    breakpoints: {
+      // 768px以上の場合
+      768: {
+        spaceBetween: 8,
+        centeredSlides : false,
+      }
+    }
+  });
+
+  //4系～
+  //メインとサムネイルを紐づける
+  slider.controller.control = thumbs;
+  thumbs.controller.control = slider;
+
   // リサイズイベント
   $(window).resize(function(){ 
     var $window = $(this).width();
