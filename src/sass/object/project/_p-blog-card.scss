@@ -3,11 +3,12 @@
 .p-blog-card {
 	max-width: rem(600);
 	width: 100%;
-	margin: auto;
-	background-color: $white;
+	margin: 0 auto;
 
 	@include mq('md') {
 		max-width: rem(350);
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -15,6 +16,7 @@
   position: relative;
   width: 100%;
   transition: all 0.3s ease 0s;
+	overflow: hidden;
 }
 
 .p-blog-card__img::before {
@@ -34,6 +36,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+	object-position: center;
 }
 
 .p-blog-card__textbox {
@@ -54,12 +57,19 @@
 	line-height: 1.857;
 	letter-spacing: 0.2em;
 
+	@include mq('md') {
+		margin-top: auto;
+	}
 }
 
 .p-blog-card__meta {
 	padding: 0 rem(23) rem(16);
 	display: flex;
 	justify-content: space-between;
+
+	@include mq('md') {
+		margin-top: auto;
+	}
 }
 
 .p-blog-card__category {
