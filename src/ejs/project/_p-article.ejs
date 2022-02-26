@@ -1,0 +1,41 @@
+<% const text = "テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" %>
+
+<% const list = "リストが入ります。リストが入ります。リストが入ります。リストが入ります。" %>
+
+<div class="p-article">
+	<h1 class="p-article__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
+	<div class="p-article__info">
+		<time class="p-article__time" datetime="2021-06-13">2020/06/13</time>
+		<% if (page.page_id == 'single-news') { %>
+			<span class="p-article__category">お知らせ</span>
+		<% } else if (page.page_id == 'single-blog') { %>
+			<span class="p-article__category">カテゴリ1</span>
+		<% } %>
+	</div>
+	<div class="p-article__thumbnail">
+		<img src="../images/single-blog/thumbnail.jpg" alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。">
+	</div>
+	<!-- 以下はWordPress化時にthe_content();で表示する部分（クラス名無し） -->
+	<div class="p-article__content">
+		<p><%= text %></p>
+		<h2>見出し2</h2>
+		<p><%= text %></p>
+		<h3>見出し3見出し3見出し3</h3>
+		<p><%= text %></p>
+		<figure>
+			<img src="../images/single-blog/single-blog__img.jpg" alt="背景がオレンジ色、中央に黒色のスマートフォン、左上に白色の紙、紙の下に黄色のペン、右下に緑色の植物が写っている画像">
+		</figure>
+		<ul>
+			<li><%= list %></li>
+			<li><%= list %></li>
+			<li><%= list %></li>
+			<li><%= list %></li>
+		</ul>
+		<ol>
+			<li><%= list %></li>
+			<li><%= list %></li>
+			<li><%= list %></li>
+			<li><%= list %></li>
+		</ol>
+	</div>
+</div>

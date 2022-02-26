@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.p-article {
+  color: $white;
+}
+
 .p-article__title {
   font-weight: $normal;
   font-size: rem(20);
@@ -156,7 +160,8 @@
   object-position: center;
 }
 
-.p-article__content ul,ol {
+.p-article__content > ul,
+.p-article__content >ol {
   font-size: rem(16);
   line-height: calc(35/16);
   letter-spacing: 0.025em;
