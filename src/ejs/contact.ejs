@@ -5,7 +5,9 @@
 		<% var location = {page_id:'contact'} %>
 
     <!-- ヘッダー -->
-    <%- include('./project/_p-header') %>
+    <header class="l-header">
+      <%- include('./project/_p-header') %>
+    </header>
 
     <!-- 下層ファーストビュー -->
     <%- include('./project/_p-sub-fv', {page: location}) %>
