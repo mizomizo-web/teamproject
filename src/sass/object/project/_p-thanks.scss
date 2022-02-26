@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.p-thanks__inner {
+	max-width: rem(600);
+	width: 100%;
+	padding: rem(80) rem(20) rem(120);
+	margin: auto;
+
+	@include mq('md') {
+		max-width: rem(576);
+		padding-top: rem(150);
+		white-space: nowrap;
+	}
+}
+
+.p-thanks__title {
+	font-size: rem(20);
+	font-weight: $regular;
+	color: $white;
+	letter-spacing: 0.1em;
+	text-align: center;
+
+	@include mq('md') {
+		font-size: rem(30);
+	}
+}
+
+.p-thanks__text {
+	font-size: rem(20);
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	color: $white;
+	text-align: center;
+	margin-top: rem(80);
+
+	@include mq('md') {
+		font-size: rem(30);
+	}
+}
+
+.p-thanks__button {
+	text-align: center;
+	margin-top: rem(80);
+}
