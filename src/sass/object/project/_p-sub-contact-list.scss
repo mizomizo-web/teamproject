@@ -10,6 +10,11 @@
 	}
 }
 
+input[type=text],
+textarea {
+	width: 100%;
+}
+
 .p-sub-contact-list__item {
 	@include mq('md') {
 		display: flex;
@@ -22,6 +27,7 @@
 }
 
 .p-sub-contact-list__label {
+	font-size: rem(14);
 	color: $white;
 
 	@include mq('md') {
@@ -72,20 +78,20 @@
 
 	@include mq('md') {
 		// 背景白ボタン
-.c-btn--white {
-  @include mq(md) {
-    color: #000;
-    background-color: $white;
-  }
+		.c-btn--white {
+			@include mq(md) {
+				color: #000;
+				background-color: $white;
+			}
 
-  &:hover {
-    color: $white;
-  }
+			&:hover {
+				color: $white;
+			}
 
-  &::before {
-    background-color: $gray;
-  }
-}
+			&::before {
+				background-color: $gray;
+			}
+		}
 	}
 }
 
