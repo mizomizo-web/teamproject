@@ -58,11 +58,15 @@
 	background-color: #FFEA2E;
 }
 
-.p-pc-nav__item.p-pc-nav__item--white a::after {
+.p-pc-nav__item .c-btn::after {
 	visibility: hidden;
 }
 
-.p-pc-nav__item.p-pc-nav__item--white:hover {
-	color: $white;
-	background-color: #333;
-}
+// .p-pc-nav__item.p-pc-nav__item--white a::after {
+// 	visibility: hidden;
+// }
+
+// .p-pc-nav__item.p-pc-nav__item--white:hover {
+// 	color: $white;
+// 	background-color: #333;
+// }
