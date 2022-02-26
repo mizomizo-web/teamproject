@@ -7,14 +7,6 @@
   }
 }
 
-.p-sub-work-cards__list {
-  margin-top: rem(16);
-
-  @include mq('md') {
-    margin-top: rem(40);
-  }
-}
-
 .p-sub-work-cards__item {
   margin: 0 calc(50% - 50vw);
 	width: 100vw;
