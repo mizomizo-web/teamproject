@@ -3,3 +3,11 @@
 .p-sub-contact__breadcrumb {
 	margin-top: rem(16);
 }
+
+.p-sub-contact__container {
+	margin-top: rem(85);
+
+	@include mq('md') {
+		margin-top: rem(115);
+	}
+}
