@@ -71,6 +71,7 @@ jQuery(function ($) {
     return false;
   });
 
+  // カテゴリリストのタブクリック
   $(".js-category-item__link").on("click", function () {
     $(".c-category-item__link").removeClass("is-active");
     $(this).addClass("is-active");
@@ -166,4 +167,16 @@ jQuery(function ($) {
     $(".js-hamburger").removeClass("is-active");
     }
   });
+
+  // スマホのアドレスバーを考慮
+	$(document).ready(function(){
+		var heroHeight = $(window).height();
+		$('.p-mv').height(heroHeight);
+	});
+
+	$(window).resize(function () {
+    var heroHeight = $(window).height();
+    $('.p-mv').height(heroHeight);
+	});
+
 });

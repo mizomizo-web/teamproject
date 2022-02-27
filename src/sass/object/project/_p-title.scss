@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.c-title {
+.p-title {
   position: relative;
 }
 
-.c-title__ja {
+.p-title__ja {
   font-size: rem(20);
   font-weight: $normal;
   line-height: calc(29/20);
@@ -19,7 +19,7 @@
   }
 }
 
-.c-title__en {
+.p-title__en {
   content: "";
   position: absolute;
   top: rem(-47);
@@ -42,14 +42,14 @@
   }
 }
 
-.c-title__en--left {
+.p-title__en--left {
   @include mq(md) {
     transform: initial;
     left: rem(90);
   }
 }
 
-.c-title__en--right {
+.p-title__en--right {
   @include mq(md) {
     transform: initial;
     left: initial;
@@ -57,7 +57,7 @@
   }
 }
 
-.c-title__en--contact {
+.p-title__en--contact {
   position: absolute;
   content: "";
   top: rem(-48);
