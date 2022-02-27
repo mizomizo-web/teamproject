@@ -2,8 +2,12 @@ jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
   // スクロールバーを除いた幅を取得
-  let vw = document.body.clientWidth;
-  document.documentElement.style.setProperty('--vw', vw + 'px');
+  const setVw = function() {
+    const vw = document.documentElement.clientWidth / 100;
+    document.documentElement.style.setProperty('--vw', `${vw}px`);
+  }
+  window.addEventListener('DOMContentLoaded', setVw);
+  window.addEventListener('resize', setVw);
 
   var topBtn = $(".c-pagetop");
   topBtn.hide();
