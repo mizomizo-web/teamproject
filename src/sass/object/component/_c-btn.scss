@@ -84,7 +84,7 @@
   }
 }
 
-// SP時背景グレー＆サイズ通常・PC時背景白＆サイズ小
+// SP時背景グレー＆サイズ通常・PC時背景白＆サイズ小（TOPページのニュース）
 .c-btn--top-news {
   background-color: $gray;
   border: 1px solid $white;
@@ -113,5 +113,18 @@
     &::before {
       background-color: $gray;
     }
+  }
+}
+
+.c-btn--pc-hidden {
+  @include mq(md) {
+    display: none; 
+  }
+}
+
+.c-btn--sp-hidden {
+  display: none;
+  @include mq(md) {
+    display: inline-block;
   }
 }
