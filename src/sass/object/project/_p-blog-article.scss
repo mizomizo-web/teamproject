@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.p-article {
+.p-blog-article {
   color: $white;
 }
 
-.p-article__title {
+.p-blog-article__title {
   font-weight: $normal;
   font-size: rem(20);
   line-height: calc(35/20);
@@ -17,20 +17,20 @@
   }
 }
 
-.p-article__info {
+.p-blog-article__info {
   margin-top: rem(19);
   @include mq(md) {
     margin-top: rem(35);
   }
 }
 
-.p-article__time {
+.p-blog-article__time {
   font-size: rem(16);
   line-height: 2;
   letter-spacing: 0.025em;
 }
 
-.p-article__category {
+.p-blog-article__category {
   font-size: rem(16);
   line-height: calc(23/16);
   letter-spacing: 0.125em;
@@ -39,7 +39,7 @@
   border: rem(1) solid $white;
 }
 
-.p-article__thumbnail {
+.p-blog-article__thumbnail {
   position: relative;
   padding-top: 66.93%; // 251/375*100%
   margin-top: rem(20);
@@ -59,7 +59,7 @@
   }
 }
 
-.p-article__thumbnail img {
+.p-blog-article__thumbnail img {
   position: absolute;
   top: 0;
   left: 0;
@@ -70,14 +70,14 @@
 }
 
 // 記事内容
-.p-article__content p {
+.p-blog-article__content p {
   font-size: rem(16);
   line-height: calc(35/16);
   letter-spacing: 0.025em;
   margin-top: rem(24);
 }
 
-.p-article__content h2 {
+.p-blog-article__content h2 {
   position: relative;
   font-weight: $normal;
   margin: rem(24) 0 0 rem(10);
@@ -94,7 +94,7 @@
   }
 }
 
-.p-article__content h3 {
+.p-blog-article__content h3 {
   display: inline-block;
   font-weight: $normal;
   font-size: rem(18);
@@ -130,7 +130,7 @@
   }
 }
 
-.p-article__content figure {
+.p-blog-article__content figure {
   position: relative;
   padding-top: 66.93%; // 251/375*100%
   margin-top: rem(24);
@@ -150,7 +150,7 @@
   }
 }
 
-.p-article__content figure img {
+.p-blog-article__content figure img {
   position: absolute;
   top: 0;
   left: 0;
@@ -160,8 +160,8 @@
   object-position: center;
 }
 
-.p-article__content > ul,
-.p-article__content >ol {
+.p-blog-article__content > ul,
+.p-blog-article__content > ol {
   font-size: rem(16);
   line-height: calc(35/16);
   letter-spacing: 0.025em;
@@ -171,17 +171,17 @@
   }
 }
 
-.p-article__content ul li {
+.p-blog-article__content ul li {
   &::before {
     content: '・';
   }
 }
-.p-article__content ol {
+.p-blog-article__content ol {
   counter-reset: item;
   counter-reset: item 0;
 }
 
-.p-article__content ol li {
+.p-blog-article__content ol li {
   &::before {
     content: counter(item, decimal);
     counter-increment: item;
