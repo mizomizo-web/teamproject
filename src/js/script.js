@@ -3,7 +3,7 @@ jQuery(function ($) {
 
   // スクロールバーを除いた幅を取得
   let vw = document.body.clientWidth;
-  document.documentElement.style.setProperty('--vw', vw + 'px');
+  document.documentElement.style.setProperty("--vw", vw + "px");
 
   var topBtn = $(".c-pagetop");
   topBtn.hide();
@@ -34,7 +34,10 @@ jQuery(function ($) {
   // ヘッダー
   $(window).on("scroll", function () {
     if (
-      ($(".slider1").height() || $(".p-sub-fv").height()) < $(this).scrollTop()
+      ($(".slider1").height() ||
+        $(".p-sub-fv").height() ||
+        $(".p-single-work__title").height() ||
+        $(".p-article__thumbnail").height()) < $(this).scrollTop()
     ) {
       $(".p-header").css("background", "rgba(17,17,17,1)");
     } else {
@@ -120,22 +123,22 @@ jQuery(function ($) {
 
   // single-swiper
   //メイン
-  var slider = new Swiper ('.gallery-slider', {
+  var slider = new Swiper(".gallery-slider", {
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
     loopedSlides: 8, //スライドの枚数と同じ値を指定
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 
   //サムネイル
-  var thumbs = new Swiper ('.gallery-thumbs', {
-    slidesPerView: 'auto',
+  var thumbs = new Swiper(".gallery-thumbs", {
+    slidesPerView: "auto",
     spaceBetween: 24,
-    centeredSlides : true,
+    centeredSlides: true,
     autoplay: true,
     speed: 1000,
     loop: true,
@@ -144,9 +147,9 @@ jQuery(function ($) {
       // 768px以上の場合
       768: {
         spaceBetween: 8,
-        centeredSlides : false,
-      }
-    }
+        centeredSlides: false,
+      },
+    },
   });
 
   //4系～
@@ -155,15 +158,15 @@ jQuery(function ($) {
   thumbs.controller.control = slider;
 
   // リサイズイベント
-  $(window).resize(function(){ 
+  $(window).resize(function () {
     var $window = $(this).width();
     var bp = 767;
-    if($window > bp){
-    $(".js-hamburger").removeClass("is-active");
-    $(".js-nav-menu").fadeOut();
-    }else{
-    $(".p-sp-nav").hide();
-    $(".js-hamburger").removeClass("is-active");
+    if ($window > bp) {
+      $(".js-hamburger").removeClass("is-active");
+      $(".js-nav-menu").fadeOut();
+    } else {
+      $(".p-sp-nav").hide();
+      $(".js-hamburger").removeClass("is-active");
     }
   });
 });
