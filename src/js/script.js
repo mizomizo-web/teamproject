@@ -2,8 +2,14 @@ jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
   // スクロールバーを除いた幅を取得
-  let vw = document.body.clientWidth;
-  document.documentElement.style.setProperty("--vw", vw + "px");
+
+  const setVw = function() {
+    const vw = document.documentElement.clientWidth / 100;
+    document.documentElement.style.setProperty('--vw', `${vw}px`);
+  }
+  window.addEventListener('DOMContentLoaded', setVw);
+  window.addEventListener('resize', setVw);
+  
 
   var topBtn = $(".c-pagetop");
   topBtn.hide();
@@ -74,6 +80,7 @@ jQuery(function ($) {
     return false;
   });
 
+  // カテゴリリストのタブクリック
   $(".js-category-item__link").on("click", function () {
     $(".c-category-item__link").removeClass("is-active");
     $(this).addClass("is-active");
@@ -169,4 +176,16 @@ jQuery(function ($) {
       $(".js-hamburger").removeClass("is-active");
     }
   });
+
+  // スマホのアドレスバーを考慮
+	$(document).ready(function(){
+		var heroHeight = $(window).height();
+		$('.p-mv').height(heroHeight);
+	});
+
+	$(window).resize(function () {
+    var heroHeight = $(window).height();
+    $('.p-mv').height(heroHeight);
+	});
+
 });

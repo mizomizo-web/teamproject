@@ -1,6 +1,8 @@
 @use "global" as *;
 
 .c-category-item__link {
+  font-size: rem(16);
+  line-height: calc(23/16);
   letter-spacing: 0.125em;
   color: $white;
   text-transform: uppercase;
@@ -15,7 +17,7 @@
   &.is-active {
     background-color: $white;
     color: $gray;
-    padding: rem(3) rem(10);
+    padding: rem(3) rem(8);
     
     @include mq(md) {
       pointer-events: none;

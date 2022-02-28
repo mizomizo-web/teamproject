@@ -2,21 +2,17 @@
 
 <% const list = "リストが入ります。リストが入ります。リストが入ります。リストが入ります。" %>
 
-<div class="p-article">
-	<h1 class="p-article__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
-	<div class="p-article__info">
-		<time class="p-article__time" datetime="2021-06-13">2020/06/13</time>
-		<% if (page.page_id == 'single-news') { %>
-			<span class="p-article__category">お知らせ</span>
-		<% } else if (page.page_id == 'single-blog') { %>
-			<span class="p-article__category">カテゴリ1</span>
-		<% } %>
+<div class="p-news-article">
+	<h1 class="p-news-article__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
+	<div class="p-news-article__info">
+		<time class="p-news-article__time" datetime="2021-06-13">2020/06/13</time>
+    <span class="p-news-article__category">お知らせ</span>
 	</div>
-	<div class="p-article__thumbnail">
+	<div class="p-news-article__thumbnail">
 		<img src="../images/single-blog/thumbnail.jpg" alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。">
 	</div>
 	<!-- 以下はWordPress化時にthe_content();で表示する部分（クラス名無し） -->
-	<div class="p-article__content">
+	<div class="p-news-article__content">
 		<p><%= text %></p>
 		<h2>見出し2</h2>
 		<p><%= text %></p>
