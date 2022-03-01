@@ -1,16 +1,6 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  // スクロールバーを除いた幅を取得
-
-  const setVw = function() {
-    const vw = document.documentElement.clientWidth / 100;
-    document.documentElement.style.setProperty('--vw', `${vw}px`);
-  }
-  window.addEventListener('DOMContentLoaded', setVw);
-  window.addEventListener('resize', setVw);
-  
-
   var topBtn = $(".c-pagetop");
   topBtn.hide();
 
@@ -43,7 +33,7 @@ jQuery(function ($) {
       ($(".slider1").height() ||
         $(".p-sub-fv").height() ||
         $(".p-single-work__title").height() ||
-        $(".p-article__thumbnail").height()) < $(this).scrollTop()
+        $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) < $(this).scrollTop()
     ) {
       $(".p-header").css("background", "rgba(17,17,17,1)");
     } else {
