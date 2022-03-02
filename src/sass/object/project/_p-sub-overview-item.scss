@@ -24,5 +24,6 @@
   @include mq(md) {
     width: calc(100% - #{rem(64)}- #{rem(88)});
     margin-left: rem(88);
+    letter-spacing: 0.0625em;
   }
 }
