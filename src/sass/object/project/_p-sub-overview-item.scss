@@ -3,8 +3,10 @@
 .p-sub-overview-item {
   display: flex;
   font-size: rem(13);
+  line-height: calc(24/13);
   @include mq(md) {
     font-size: rem(16);
+    line-height: 1.5;
   }
 }
 
