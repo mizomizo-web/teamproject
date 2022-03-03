@@ -65,15 +65,14 @@
 .p-blog-card__title {
 	font-size: rem(18);
 	font-weight: $medium;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.056em;
 	line-height: 1.944;
 }
 
 .p-blog-card__text {
 	font-size: rem(14);
-	letter-spacing: 0.1em;
 	line-height: 1.857;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.071em;
 
 	@include mq('md') {
 		margin-top: auto;
@@ -100,4 +99,6 @@
 
 .p-blog-card__time {
 	font-size: rem(14);
+	line-height: 1.857;
+	letter-spacing: 0.071em;
 }
