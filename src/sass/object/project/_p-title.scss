@@ -45,7 +45,7 @@
 .p-title__en--left {
   @include mq(md) {
     transform: initial;
-    left: rem(90);
+    left: 0;
   }
 }
 
@@ -53,7 +53,7 @@
   @include mq(md) {
     transform: initial;
     left: initial;
-    right: rem(91);
+    right: rem(-6);
   }
 }
 
