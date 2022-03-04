@@ -2,6 +2,8 @@
 
 .p-blog-card {
 	background-color: $white;
+	display: block;
+	width: 100%;
 
 	@include mq('md') {
 		max-width: rem(350);
