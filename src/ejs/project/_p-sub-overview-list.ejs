@@ -5,14 +5,14 @@
   {title:"売上高", description:"テキストが入ります。"},
   {title:"代表名", description:"テキストが入ります。"},
   {title:"従業員数", description:"テキストが入ります。"},
-  {title:"事業内容", description:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。"},
+  {title:"事業内容", description:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。"},
   {title:"所在地", description:"東京駅"}
 ] %>
 
-<dl class="p-sub-overview-list">
+<ul class="p-sub-overview-list">
   <% for (var item of listItem) {%>
     <li class="p-sub-overview-list__item">
       <%- include('./_p-sub-overview-item',{title:item.title, description:item.description}) %>
     </li>
   <% } %>
-</dl>
+</ul>
