@@ -13,8 +13,8 @@
 
 <ul class="p-news-list">
   <% for (var item of newsItem) {%>
-    <div class="p-news-list__item">
+    <li class="p-news-list__item">
       <%- include('./_p-news-item',{datetime:item.datetime, time:item.time, category:item.category, title:item.title}) %>
-    </div>
+    </li>
   <% } %>
 </ul>
