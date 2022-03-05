@@ -31,3 +31,12 @@
     margin-left: 0;
   }
 }
+
+.p-footer__nav {
+  margin-top: rem(4);
+  width: 100%;
+  @include mq(md) {
+    margin-top: initial;
+    width: initial;
+  }
+}
