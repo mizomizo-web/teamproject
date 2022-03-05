@@ -11,8 +11,7 @@
 
     <!-- ブログ詳細記事セクション -->
     <section class="p-single-blog l-single-blog">
-      <div class="p-single-blog__inner">
-
+      <div class="l-inner">
         <!-- パンくずリスト -->
         <div class="p-single-blog__breadcrumb">
           <%-include('./component/_c-breadcrumb',{
@@ -22,7 +21,9 @@
             })
           %>
         </div>
+      </div>
 
+      <div class="p-single-blog__inner">
         <!-- 記事コンテンツ -->
         <article class="p-single-blog__article">
           <%- include('./project/_p-blog-article') %>
@@ -32,7 +33,6 @@
         <div class="p-single-blog__pagination">
           <%- include('./component/_c-pagination-prev-next') %>
         </div>
-      
       </div>
     </section>
     
