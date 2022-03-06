@@ -13,9 +13,9 @@
 }
 
 .p-blog-card:hover {
-	background-color: $gray;
-	opacity: 1;
 	@include mq('md') {
+		background-color: $gray;
+		opacity: 1;
 		.p-blog-card__img img {
 			transform: scale(1.1);
 		}
