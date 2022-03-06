@@ -13,9 +13,9 @@
 }
 
 .p-related-blog-card:hover {
-	background-color: $gray;
-	opacity: 1;
 	@include mq('md') {
+		background-color: $gray;
+		opacity: 1;
 		.p-related-blog-card__textbox,
 		.p-related-blog-card__time {
 			color: $white;
