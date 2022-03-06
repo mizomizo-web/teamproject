@@ -1,13 +1,15 @@
 @use "global" as *;
 
 .p-work-card__link {
-  &:hover {
-    .p-work-card__head img {
-      transform: scale(1.1);
-    }
-
-    .p-work-card__title {
-      color: $yellow;
+  @include mq('md') {
+    &:hover {
+      .p-work-card__head img {
+        transform: scale(1.1);
+      }
+  
+      .p-work-card__title {
+        color: $yellow;
+      }
     }
   }
 }
