@@ -6,7 +6,7 @@
 
     <!-- ヘッダー -->
     <header class="l-header">
-      <%- include('./project/_p-header') %>
+      <%- include('./common/_p-header') %>
     </header>
 
     <!-- ブログ詳細記事セクション -->
@@ -31,7 +31,7 @@
 
         <!-- ページネーション -->
         <div class="p-single-blog__pagination">
-          <%- include('./component/_c-pagination-prev-next') %>
+          <%- include('./component/_c-pagination-prev-next', {page: location}) %>
         </div>
       </div>
     </section>
@@ -54,7 +54,7 @@
     </section>
 
     <!-- フッター -->
-    <%- include('./project/_p-footer') %>
+    <%- include('./common/_p-footer') %>
 
     <!-- ページトップ -->
     <%- include('./component/_c-pagetop') %>
