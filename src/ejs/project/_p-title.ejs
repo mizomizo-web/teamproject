@@ -1,0 +1,18 @@
+<!-- 各セクションに以下のコメントアウトを記述 -->
+<%#
+  var localmeta = {
+    jaTitle: 'ほげ',
+    enTitle: 'hoge'
+  };
+%>
+
+<div class="p-title">
+  <h2 class="p-title__ja"><%= meta.jaTitle %></h2>
+  <% if (meta.enTitle == 'works' || meta.enTitle == 'Blog') { %>
+    <p class="p-title__en p-title__en--right"><%= meta.enTitle %></p>
+  <% } else if (meta.enTitle == 'contact') { %>
+    <p class="p-title__en p-title__en--contact"><%= meta.enTitle %></p>
+  <% } else { %>
+    <p class="p-title__en p-title__en--left"><%= meta.enTitle %></p>
+  <% } %>
+</div>

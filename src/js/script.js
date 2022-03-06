@@ -1,10 +1,6 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  // スクロールバーを除いた幅を取得
-  let vw = document.body.clientWidth;
-  document.documentElement.style.setProperty("--vw", vw + "px");
-
   var topBtn = $(".c-pagetop");
   topBtn.hide();
 
@@ -37,7 +33,7 @@ jQuery(function ($) {
       ($(".slider1").height() ||
         $(".p-sub-fv").height() ||
         $(".p-single-work__title").height() ||
-        $(".p-article__thumbnail").height()) < $(this).scrollTop()
+        $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) < $(this).scrollTop()
     ) {
       $(".p-header").css("background", "rgba(17,17,17,1)");
     } else {
@@ -74,6 +70,7 @@ jQuery(function ($) {
     return false;
   });
 
+  // カテゴリリストのタブクリック
   $(".js-category-item__link").on("click", function () {
     $(".c-category-item__link").removeClass("is-active");
     $(this).addClass("is-active");
@@ -169,4 +166,16 @@ jQuery(function ($) {
       $(".js-hamburger").removeClass("is-active");
     }
   });
+
+  // スマホのアドレスバーを考慮
+	$(document).ready(function(){
+		var heroHeight = $(window).height();
+		$('.p-mv').height(heroHeight);
+	});
+
+	$(window).resize(function () {
+    var heroHeight = $(window).height();
+    $('.p-mv').height(heroHeight);
+	});
+
 });
