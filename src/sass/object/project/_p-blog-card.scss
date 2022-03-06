@@ -85,6 +85,7 @@
 	padding: 0 rem(23) rem(16);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 
 	@include mq('md') {
 		margin-top: auto;
