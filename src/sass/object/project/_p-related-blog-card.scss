@@ -3,11 +3,12 @@
 .p-related-blog-card {
 	max-width: rem(600);
 	width: 100%;
-	margin: auto;
+	margin: 0 auto;
 	background-color: $white;
 
 	@include mq('md') {
 		max-width: rem(251);
+		display: flex;
 	}
 }
 
@@ -23,7 +24,10 @@
 }
 
 .p-related-blog-card__link {
-	// display: block;
+	@include mq('md') {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .p-related-blog-card__img {
@@ -75,6 +79,7 @@
 	font-size: rem(14);
 	line-height: 1.857;
 	letter-spacing: 0.2em;
+	margin-top: rem(4);
 }
 
 .p-related-blog-card__meta {
@@ -85,6 +90,7 @@
 	@include mq('md') {
 		padding-left: rem(8);
 		padding-right: rem(8);
+		margin-top: auto;
 	}
 }
 
