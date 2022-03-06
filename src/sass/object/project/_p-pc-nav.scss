@@ -34,12 +34,11 @@
 }
 
 .p-pc-nav__item.p-pc-nav__item--white a {
-	padding: 0;
+	padding-left: rem(32);
+	padding-right: rem(32);
 }
 
 .p-pc-nav__item--white {
-	padding-left: rem(32);
-	padding-right: rem(32);
 	color: $gray;
 	background-color: $white;
 }
