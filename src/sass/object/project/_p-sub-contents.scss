@@ -14,11 +14,11 @@
       flex-direction: row-reverse;
       
       .p-sub-content-card__img {
-        margin-left: rem(40);
+        margin-left: rem(30);
       }
       
       .p-sub-content-card__info {
-        width: calc(50% - #{rem(40)});
+        width: calc(50% - #{rem(30)});
       }
     }
   }
