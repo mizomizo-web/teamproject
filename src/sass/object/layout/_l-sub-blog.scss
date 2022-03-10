@@ -1,5 +1,8 @@
 @use "global" as *;
 
 .l-sub-blog {
-  margin-top: rem(16);
+  margin-top: rem(85);
+  @include mq(md) {
+    margin-top: rem(99);
+  }
 }
