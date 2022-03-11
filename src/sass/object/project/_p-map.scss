@@ -3,13 +3,11 @@
 .p-map__iframe {
   position: relative;
   padding-top: 89.55%; // 335/375*100%
-  max-width: rem(500);
   margin-left: calc(50% - 50vw); // インナー幅を超えて表示
   margin-right: calc(50% - 50vw); // インナー幅を超えて表示
   transform: translate(calc(50vw - 50%)); // 中央揃え
   @include mq(md) {
     padding-top: 33.36%; // 367/1100*100%
-    max-width: initial;
     margin-left: initial;
     margin-right: initial;
     transform: initial;
