@@ -9,43 +9,26 @@
       <%- include('./common/_p-header') %>
     </header>
 
-    <!-- ブログ詳細記事セクション -->
-    <section class="p-single-blog l-single-blog">
+    <!-- パンくずリスト -->
+    <div class="l-single-breadcrumb">
       <div class="l-inner">
-        <!-- パンくずリスト -->
-        <div class="p-single-blog__breadcrumb">
-          <%-include('./component/_c-breadcrumb',{
-            categoryName:'ブログ記事一覧',
-            postName:'ブログ記事詳細',
-            src:'blog.html'
-            })
-          %>
-        </div>
+        <%-include('./component/_c-breadcrumb',{
+          categoryName:'ブログ記事一覧',
+          postName:'ブログ記事詳細',
+          src:'blog.html'
+          })
+        %>
       </div>
-
-      <div class="p-single-blog__inner">
-        <!-- 記事コンテンツ -->
-        <article class="p-single-blog__article">
-          <%- include('./project/_p-blog-article') %>
-        </article>
-
-        <!-- ページネーション -->
-        <div class="p-single-blog__pagination">
-          <%- include('./component/_c-pagination-prev-next', {page: location}) %>
-        </div>
-      </div>
+    </div>
+    
+    <!-- ブログ詳細記事セクション -->
+    <section class="l-single-blog">
+      <%- include('./project/_p-single-blog') %>
     </section>
     
     <!-- 関連記事セクション -->
-    <section class="p-related-blog l-related-blog">
-      <div class="p-related-blog__inner l-inner">
-        <div class="p-related-blog__title">
-          <%- include('./component/_c-related-card-title', {page: location}) %>
-        </div>
-        <div class="p-related-blog__items">
-          <%- include('./project/_p-related-blog-cards') %>
-        </div>
-      </div>
+    <section class="l-related-blog">
+      <%- include('./project/_p-related-blog') %>
     </section>
 
     <!-- お問い合わせ -->

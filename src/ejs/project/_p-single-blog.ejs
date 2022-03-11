@@ -1,0 +1,15 @@
+<% var location = {page_id:'p-single-blog'} %>
+
+<div class="p-single-blog">
+  <div class="p-single-blog__inner">
+    <!-- 記事コンテンツ -->
+    <article class="p-single-blog__article">
+      <%- include('./_p-blog-article') %>
+    </article>
+
+    <!-- ページネーション -->
+    <div class="p-single-blog__pagination">
+      <%- include('../component/_c-pagination-prev-next', {page: location}) %>
+    </div>
+  </div>
+</div>
