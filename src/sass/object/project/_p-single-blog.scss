@@ -18,13 +18,6 @@
 	}
 }
 
-.p-single-blog__article {
-  margin-top: rem(78);
-  @include mq(md) {
-    margin-top: rem(91);
-  }
-}
-
 .p-single-blog__pagination {
   margin-top: rem(80);
   @include mq(md) {
