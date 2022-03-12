@@ -12,31 +12,21 @@
     <!-- 下層ファーストビュー -->
     <%- include('./project/_p-sub-fv', {page: location}) %>
     
-    <!-- 企業概要コンテンツ -->
-    <div class="p-sub-overview l-sub-overview">
-      <div class="p-sub-overview__inner l-inner">
-        
-        <!-- パンくずリスト -->
-        <div class="p-sub-overview__breadcrumb">
-          <%-include('./component/_c-breadcrumb',{
-            categoryName:'企業概要',
-            postName:'',
-            src:'overview.html'
-            })
-          %>
-        </div>
-        
-        <!-- 企業概要の説明 -->
-        <dl class="p-sub-overview__list">
-          <%- include('./project/_p-sub-overview-list') %>
-        </dl>
-        
-        <!-- マップ -->
-        <div class="p-sub-overview__map">
-          <%- include('./project/_p-map') %>
-        </div>
-
+    <!-- パンくずリスト -->
+    <div class="l-breadcrumb">
+      <div class="l-inner">
+        <%-include('./component/_c-breadcrumb',{
+          categoryName:'企業概要',
+          postName:'',
+          src:'overview.html'
+          })
+        %>
       </div>
+    </div>
+
+    <!-- 企業概要コンテンツ -->
+    <div class="l-sub-overview">
+      <%- include('./project/_p-sub-overview') %>
     </div>
 
     <!-- お問い合わせ -->

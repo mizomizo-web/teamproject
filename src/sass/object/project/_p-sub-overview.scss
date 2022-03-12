@@ -2,8 +2,11 @@
 
 .p-sub-overview__list {
   color: $white;
-  margin-top: rem(80);
+}
+
+.p-sub-overview__map {
+  margin-top: rem(120);
   @include mq(md) {
-    margin-top: rem(115);
+    margin-top: rem(80);
   }
 }

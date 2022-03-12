@@ -1,0 +1,12 @@
+<% var location = {page_id:'p-related-blog'} %>
+
+<div class="p-related-blog">
+  <div class="p-related-blog__inner l-inner">
+    <div class="p-related-blog__title">
+      <%- include('../component/_c-related-card-title', {page: location}) %>
+    </div>
+    <div class="p-related-blog__items">
+      <%- include('./_p-related-blog-cards') %>
+    </div>
+  </div>
+</div>
