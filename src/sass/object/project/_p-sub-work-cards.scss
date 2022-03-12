@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-sub-work-cards {
+.p-sub-work-cards__wrapper {
   @include mq(md) {
     display: flex;
     flex-wrap: wrap;

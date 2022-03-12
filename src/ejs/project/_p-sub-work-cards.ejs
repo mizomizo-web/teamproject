@@ -16,11 +16,15 @@
 ] %>
 
 <% if (page.page_id == 'work') { %>
-  <ul class="p-sub-work-cards">
-    <% for (var item of cardItem) {%>
-      <li class="p-sub-work-cards__item">
-        <%- include('./_p-work-card',{category:item.category, src:item.src, alt:item.alt, title:item.title}) %>
-      </li>
-    <% } %>
-  </ul>
+  <div class="p-sub-work-cards">
+    <div class="p-sub-work-cards__inner l-inner">
+      <div class="p-sub-work-cards__wrapper">
+        <% for (var item of cardItem) {%>
+        <div class="p-sub-work-cards__item">
+          <%- include('./_p-work-card',{category:item.category, src:item.src, alt:item.alt, title:item.title}) %>
+        </div>
+      <% } %>
+      </div>
+    </div>
+  </div>
 <% } %>
