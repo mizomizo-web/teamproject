@@ -4,6 +4,12 @@
 	color: $white;
 }
 
+.p-single-work__inner {
+	max-width: rem(800);
+	width: 100%;
+	margin: 0 auto;
+}
+
 .p-single-work__title {
 	font-size: rem(20);
 	font-weight: $regular;
@@ -25,7 +31,7 @@
 		margin-top: rem(104);
 	}
 }
-//ギャラリー
+
 .p-single-work__slider {
 	margin: rem(32) calc(50% - 50vw) 0;
 	width: 100vw;
@@ -34,115 +40,5 @@
     max-width: rem(800);
     margin-left: auto;
     margin-right: auto;
-  }
-
-  //メイン
-  .gallery-slider {
-    width: 100%;
-    aspect-ratio: 375 / 250;
-
-    .sub-swiper-slide {
-      height: rem(250);
-
-      img {
-        display: block;
-        width: auto;
-      }
-    }
-  }
-
-	// 矢印
-	.swiper-button-prev {
-		position: absolute;
-		border-radius: 50%;
-		background-color: $black;
-		width: rem(30);
-		height: rem(30);
-
-		@include mq('md') {
-			width: rem(50);
-			height: rem(50);
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			top: 30%;
-			left: 40%;
-			width: rem(10);
-			height: rem(10);
-			border-top: 2px solid #FFEA2E;
-			border-left: 2px solid #FFEA2E;
-			transform: rotate(-45deg);
-
-			@include mq('md') {
-				width: rem(20);
-				height: rem(20);
-			}
-		}
-	}
-
-	.swiper-button-next {
-		position: absolute;
-		border-radius: 50%;
-		background-color: $black;
-		width: rem(30);
-		height: rem(30);
-
-		@include mq('md') {
-			width: rem(50);
-			height: rem(50);
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			top: 30%;
-			left: 23%;
-			width: rem(10);
-			height: rem(10);
-			border-top: 2px solid #FFEA2E;
-			border-left: 2px solid #FFEA2E;
-			transform: rotate(135deg);
-
-			@include mq('md') {
-				width: rem(20);
-				height: rem(20);
-			}
-		}
-	}
-
-  //サムネイル
-  .gallery-thumbs {
-    width: 100%;
-    padding: 0;
-    margin-top: rem(32);
-    overflow: hidden;
-
-    @include mq('md') {
-      margin-top: rem(40);
-    }
-
-    .swiper-slide {
-      width: rem(163);
-      height: rem(163);
-      text-align: center;
-      overflow: hidden;
-      cursor: pointer;
-
-      @include mq('md') {
-        width: rem(93);
-        height: rem(93);
-      }
-
-      &-active {
-        opacity: 1;
-      }
-
-      img {
-        width: auto;
-        height: 100%;
-      }
-    }
   }
 }
