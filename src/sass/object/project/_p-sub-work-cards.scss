@@ -1,16 +1,15 @@
 @use "global" as *;
 
-.p-sub-work-cards__wrapper {
-  @include mq(md) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 .p-sub-work-cards__inner {
   @include mq('md') {
     max-width: rem(1100);
     margin: 0 auto;
+  }
+}
+.p-sub-work-cards__wrapper {
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
