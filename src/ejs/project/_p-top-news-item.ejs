@@ -2,13 +2,10 @@
 	<div class="p-top-news-item__head">
 		<time datetime="<%= datetime %>" class="p-top-news-item__date"><%= time %></time>
 		<span class="p-top-news-item__category"><%= category %></span>
-	</div>
-	<h2 class="p-top-news-item__body">
 		<a href="<%= src %>" class="p-top-news-item__link">
-			<span class="p-top-news-item__title"><%= title %></span>
+			<h2 class="p-top-news-item__body">
+				<span class="p-top-news-item__title"><%= title %></span>
+			</h2>
 		</a>
-	</h2>
-	<div class="p-top-news-item__button">
-		<%- include('../component/_c-btn',{link:'news.html', text:'すべて見る', bgColor:'', location:'top-news'}) %>
 	</div>
 </div>
