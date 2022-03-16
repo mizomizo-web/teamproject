@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.p-single-news__breadcrumb {
-	margin-top: rem(66);
-}
-
 .p-single-news__inner {
 	@include mq('md') {
 		max-width: rem(800);
