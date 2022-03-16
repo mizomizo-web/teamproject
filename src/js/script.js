@@ -32,7 +32,7 @@ jQuery(function ($) {
     if (
       ($(".slider1").height() ||
         $(".p-sub-fv").height() ||
-        $(".p-single-work__title").height() ||
+        $(".p-work-article__title").height() ||
         $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) < $(this).scrollTop()
     ) {
       $(".p-header").css("background", "rgba(17,17,17,1)");
