@@ -8,8 +8,10 @@
 }
 .p-sub-work-cards__wrapper {
   @include mq(md) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: rem(114);
+    column-gap: rem(48);
   }
 }
 
@@ -25,22 +27,22 @@
 
 .p-sub-work-cards__item {
   & + & {
-    margin-top: rem(48);
+    // margin-top: rem(48);
   }
   
   @include mq(md) {
-    width: calc(50% - #{rem(48)}/2);
+    // width: calc(50% - #{rem(48)});
 
-    & + & {
-      margin-top: 0;
-    }
+    // & + & {
+    //   margin-top: 0;
+    // }
 
-    &:nth-child(2n) {
-      margin-left: rem(48);
-    }
+    // &:nth-child(2n) {
+    //   margin-left: rem(48);
+    // }
 
-    &:nth-child(n+3) {
-      margin-top: rem(114);
-    }
+    // &:nth-child(n+3) {
+    //   margin-top: rem(114);
+    // }
   }
 }
