@@ -1,37 +1,12 @@
 @use "global" as *;
 
-.p-related-work-cards__list {
-  margin-top: rem(32);
-
-  @include mq(md) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: rem(80);
-  }
-}
-
 .p-related-work-cards__items {
-  
-}
-
-.p-related-work-cards__item {
-  & + & {
-    margin-top: rem(24);
-  }
+  display: grid;
+  row-gap: rem(24);
 
   @include mq(md) {
-    width: calc(100%/4 - #{rem(32)}*3/4);
-
-    & + & {
-      margin-top: 0;
-    }
-
-    &:not(:nth-child(4n+1)) {
-      margin-left: rem(32);
-    }
-
-    &:nth-child(n+5) {
-      margin-top: rem(48);
-    }
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: rem(48);
+    column-gap: rem(32);
   }
 }
