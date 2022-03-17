@@ -1,9 +1,1 @@
-<!-- 以下をworks.ejsに記述 -->
-<%# var location = {page_id:'single-works'} %>
-<%#- include('./component/_c-related-card-title', {page: location}) %>
-
-<% if (page.page_id == 'single-work') { %>
-  <h2 class="c-related-card-title">関連制作</h2>
-<% } else if (page.page_id == 'p-related-blog') { %>
-  <h2 class="c-related-card-title">関連記事</h2>
-<% } %>
+<h2 class="c-related-card-title"><%= title %></h2>
