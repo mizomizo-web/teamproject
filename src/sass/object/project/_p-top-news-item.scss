@@ -64,20 +64,10 @@
   line-height: calc(23/16);
   color: $white;
   transition: color 0.3s;
+  display: block;
 
   @include mq(md) {
     line-height: 1.5;
   }
-}
-
-.p-top-news-item__button {
-	text-align: center;
-	margin-top: rem(28);
-
-	@include mq('md') {
-		width: rem(134);
-		margin-top: 0;
-    margin-left: rem(48);
-	}
 }
 

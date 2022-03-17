@@ -10,3 +10,14 @@
 .p-top-news__list + .p-top-news__list {
 	margin-top: rem(32);
 }
+
+.p-top-news__button {
+	text-align: center;
+	margin-top: rem(28);
+
+	@include mq('md') {
+		width: rem(134);
+		margin-top: 0;
+    margin-left: rem(48);
+	}
+}
