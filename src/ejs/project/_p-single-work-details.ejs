@@ -4,7 +4,7 @@
   {title:"その他", text:"テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" }
 ] %>
 
-<ul class="p-single-work-details l-inner">
+<ul class="p-single-work-details">
   <% for (var point of pointItem) {%>
     <%- include('../project/_p-single-work-detail',{point:point.title, text:point.text}) %>
   <% } %>
