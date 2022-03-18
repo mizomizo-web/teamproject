@@ -42,14 +42,17 @@
 
   @include mq(md) {
     margin-top: initial;
-    margin-left: rem(61);
   }
 }
 
 .p-top-news-item__link {
   display: block;
-
+  
   @include mq(md) {
+    margin-left: rem(61);
+    max-width: rem(572);
+    width: 100%;
+
     &:hover {
       .p-top-news-item__title {
         text-decoration: underline;
