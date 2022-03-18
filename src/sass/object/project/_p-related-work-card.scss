@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.p-related-work-card__link {
+  @include mq('md') {
+    &:hover {
+      .p-work-card__head img {
+        transform: scale(1.1);
+      }
+  
+      .p-work-card__title {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.p-related-work-card__head {
+  overflow: hidden;
+  padding-top: 66.57%; // 223/335*100%
+  position: relative;
+  max-width: rem(500);
+  
+  @include mq(md) {
+    max-width: initial;
+  }
+}
+
+.p-related-work-card__category {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  font-size: rem(16);
+  line-height: calc(23/16);
+  letter-spacing: 0.125em;
+  background-color: $black;
+  color: $white;
+  padding: rem(8) rem(20);
+}
+
+.p-related-work-card__head img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s;
+}
+
+.p-related-work-card__title {
+  font-weight: $medium;
+  font-size: rem(18);
+  line-height: calc(35/18);
+  letter-spacing: 0.056em;
+  color: $white;
+  text-align: center;
+  transition: color 0.3s;
+}
