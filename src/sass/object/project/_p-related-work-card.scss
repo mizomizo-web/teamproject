@@ -3,11 +3,11 @@
 .p-related-work-card__link {
   @include mq('md') {
     &:hover {
-      .p-work-card__head img {
+      .p-related-work-card__head img {
         transform: scale(1.1);
       }
   
-      .p-work-card__title {
+      .p-related-work-card__title {
         color: $yellow;
       }
     }
