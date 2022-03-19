@@ -13,7 +13,7 @@
     <ul class="p-related-work-cards__items">
       <% for (var item of cardItem) {%>
         <li class="p-related-work-cards__item">
-          <%- include('./_p-work-card',{src:item.src, alt:item.alt, title:item.title, excerpt:item.excerpt, category:item.category, datetime:item.datetime, time:item.time}) %>
+          <%- include('./_p-related-work-card',{src:item.src, alt:item.alt, title:item.title, excerpt:item.excerpt, category:item.category, datetime:item.datetime, time:item.time}) %>
         </li>
       <% } %>
     </ul>
