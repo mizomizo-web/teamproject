@@ -5,9 +5,11 @@
 ] %>
 
 <div class="p-single-work-details">
-  <ul class="p-single-work-details__item">
+  <ul class="p-single-work-details__items">
     <% for (var point of pointItem) {%>
-      <%- include('../project/_p-single-work-detail',{point:point.title, text:point.text}) %>
-    <% } %>
+      <li class="p-single-work-details__item">
+        <%- include('../project/_p-single-work-detail',{point:point.title, text:point.text}) %>
+      </li>
+      <% } %>
   </ul>
 </div>

@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.p-single-work-detail + .p-single-work-detail {
-	margin-top: rem(32);
-}
-
 .p-single-work-detail {
 	max-width: rem(600);
 	width: 100%;
