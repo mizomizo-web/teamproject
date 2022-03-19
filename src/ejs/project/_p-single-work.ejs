@@ -1,0 +1,22 @@
+<% var location = {page_id:'p-single-work'} %>
+
+<div class="p-single-work">
+	<div class="p-single-work__inner">
+		<article class="p-single-work__article">
+			<%- include('../project/_p-work-article') %>
+		</article>
+
+		<div class="p-single-work__slider p-gallery">
+			<%- include('../project/_p-gallery') %>
+		</div>
+
+		<div class="p-single-work__textbox">
+			<%- include('../project/_p-single-work-details') %>
+		</div>
+		
+		<!-- ページネーション -->
+		<div class="p-single-work__pagination">
+			<%- include('../component/_c-pagination-prev-next', {link:'work.html', page: location}) %>
+		</div>
+	</div>
+</div>

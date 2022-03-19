@@ -1,36 +1,15 @@
 @use "global" as *;
 
-.p-work-card {
-  //marginはBlock要素に付与予定
-  // & + & {
-  //   margin-top: rem(48);
-  // }
-  
-  // @include mq(md) {
-  //   width: calc(50% - #{rem(48)}/2);
-
-  //   & + & {
-  //     margin-top: 0;
-  //   }
-
-  //   &:nth-child(2n) {
-  //     margin-left: rem(48);
-  //   }
-
-  //   &:nth-child(n+3) {
-  //     margin-top: rem(114);
-  //   }
-  // }
-}
-
 .p-work-card__link {
-  &:hover {
-    .p-work-card__head img {
-      transform: scale(1.1);
-    }
-
-    .p-work-card__title {
-      color: $yellow;
+  @include mq('md') {
+    &:hover {
+      .p-work-card__head img {
+        transform: scale(1.1);
+      }
+  
+      .p-work-card__title {
+        color: $yellow;
+      }
     }
   }
 }
@@ -39,6 +18,16 @@
   overflow: hidden;
   padding-top: 66.57%; // 223/335*100%
   position: relative;
+  max-width: rem(500);
+  margin-left: calc(50% - 50vw); // インナー幅を超えて表示
+  margin-right: calc(50% - 50vw); // インナー幅を超えて表示
+  transform: translate(calc(50vw - 50%)); // 中央揃え
+  @include mq(md) {
+    max-width: initial;
+    margin-left: initial;
+    margin-right: initial;
+    transform: initial;
+  }
 }
 
 .p-work-card__category {
@@ -66,7 +55,7 @@
 }
 
 .p-work-card__title {
-  font-weight: 500;
+  font-weight: $medium;
   font-size: rem(18);
   line-height: calc(35/18);
   letter-spacing: 0.056em;

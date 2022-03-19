@@ -3,23 +3,20 @@
 .c-category-list__items {
   display: flex;
   flex-wrap: wrap;
-  margin: rem(-16) 0 0 rem(-24);
-
+  margin: rem(-16) 0 0 rem(-26);
+  
   @include mq(md) {
     margin: initial;
   }
 }
 
 .c-category-list__item {
-  margin-top: rem(16);
-  margin-left: rem(24);
+  margin: rem(16) 0 0 rem(24); 
 
   @include mq(md) {
-    margin: initial;
-  }
-  
-  @include mq(md) {
-    & + & {
+    margin: rem(16) 0 0 0;
+
+    &:not(:first-child) {
       margin-left: rem(40);
     }
   }

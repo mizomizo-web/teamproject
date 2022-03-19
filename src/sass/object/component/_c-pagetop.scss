@@ -9,7 +9,7 @@
 	height: rem(45);
 	background-color: $white;
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: background 0.3s;
 }
 
 .c-pagetop::after {
@@ -25,12 +25,16 @@
 }
 
 .c-pagetop:hover {
-	background-color: $gray;
+	@include mq('md') {
+		background-color: $gray;
+	}
 }
 
 .c-pagetop:hover::after {
-	border-top-color: $white;
-	border-left-color: $white;
+	@include mq('md') {
+		border-top-color: $white;
+		border-left-color: $white;
+	}
 }
 
 .c-pagetop a {

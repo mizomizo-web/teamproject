@@ -1,0 +1,20 @@
+<div class="p-gallery">
+	<div class="swiper gallery-slider">
+		<!-- メイン -->
+		<div class="swiper-wrapper single-swiper-wrapper">
+			<% for (var i=1; i < 9; i++) { %>
+				<div class="swiper-slide single-swiper-slide"><img src="./images/work/work0<%= i %>.jpg" alt="work0<%= i %>"></div>
+			<% } %>
+		</div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	</div>
+	<!-- サムネイル -->
+	<div class="swiper gallery-thumbs">
+		<div class="swiper-wrapper">
+			<% for (var i=1; i < 9; i++) { %>
+				<div class="swiper-slide"><img src="./images/work/work0<%= i %>.jpg" alt="work0<%= i %>"></div>
+			<% } %>
+		</div>
+	</div>
+</div>

@@ -1,18 +1,18 @@
 <%
   var localmeta = {
     jaTitle: 'お問い合わせ',
-    enTitle: 'Contact',
+    enTitle: 'contact',
   };
 %>
 
 <div class="p-common-contact">
   <div class="p-common-contact__inner l-inner">
     <div class="p-common-contact__title">
-      <%- include('../component/_c-title.ejs', {meta: localmeta}) %>
+      <%- include('./_p-title.ejs', {meta: localmeta}) %>
     </div>
     <p class="p-common-contact__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
     <div class="p-common-contact__button">
-      <%- include('../component/_c-btn',{link:'contact.html', text:'お問い合わせへ', bgColor:'gray', location:''}) %>
+      <%- include('../component/_c-btn',{link:'contact.html', text:'お問い合わせへ', bgColor:'', location:'common-contact'}) %>
     </div>
   </div>
 </div>
