@@ -59,6 +59,12 @@ jQuery(function ($) {
     // $('body').css('overflow-y', 'hidden');  // 本文の縦スクロールを無効
   });
 
+  //ページ遷移時にドロワーを閉じる
+  $(".js-sp-nav__item a").on("click", function () {
+    $(".c-hamburger").removeClass("is-active");
+    $(".p-sp-nav").fadeOut();
+  });
+
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
   $(document).on("click", 'a[href*="#"]', function () {
     let time = 400;
