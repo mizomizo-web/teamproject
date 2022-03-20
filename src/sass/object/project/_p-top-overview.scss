@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.p-top-overview {
+	overflow-x: hidden;
+}
+
 .p-top-overview__inner {
 	width: 100%;
 	margin: auto;
@@ -7,7 +11,6 @@
 
 	@include mq('md') {
 		padding-top: rem(63);
-		overflow-x: hidden;
 	}
 }
 
@@ -18,18 +21,16 @@
 }
 
 .p-top-overview__bg {
+	margin: rem(48) calc(50% - 50vw) 0;
+	width: 100vw;
+	
 	@include mq('md') {
-		margin-top: rem(48);
 		background-image: linear-gradient(90deg, #333 0%, #333 70%, transparent 70%, transparent 100%);
-		margin: rem(48) calc(50% - 50vw) 0;
-		width: 100vw;
 		padding: rem(80) rem(25);
 	}
 }
 
 .p-top-overview__wrapper {
-	margin-top: rem(48);
-
 	@include mq('md') {
 		margin-top: 0;
 		display: flex;
@@ -79,6 +80,7 @@
 
 .p-top-overview__head {
 	font-size: rem(20);
+	font-weight: $regular;
 	letter-spacing: 0.1em;
 	text-align: center;
 

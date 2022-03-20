@@ -9,6 +9,7 @@
 	height: rem(45);
 	background-color: $white;
 	cursor: pointer;
+	transition: background 0.3s;
 }
 
 .c-pagetop::after {
