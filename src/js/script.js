@@ -176,12 +176,12 @@ jQuery(function ($) {
   // スマホのアドレスバーを考慮
 	$(document).ready(function(){
 		var heroHeight = $(window).height();
-		$('.p-mv').height(heroHeight);
+		$('.slide-image1, .slide-image2, .slide-image3').height(heroHeight);
 	});
 
 	$(window).resize(function () {
     var heroHeight = $(window).height();
-    $('.p-mv').height(heroHeight);
+    $('.slide-image1, .slide-image2, .slide-image3').height(heroHeight);
 	});
 
 });
