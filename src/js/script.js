@@ -61,8 +61,8 @@ jQuery(function ($) {
 
   //ページ遷移時にドロワーを閉じる
   $(".js-sp-nav__item a").on("click", function () {
-    $(".c-hamburger").removeClass("is-active");
-    $(".p-sp-nav").fadeOut();
+    $(".js-hamburger").removeClass("is-active");
+    $(".js-nav-menu").fadeOut();
   });
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
