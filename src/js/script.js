@@ -93,8 +93,7 @@ jQuery(function ($) {
   });
 
   // swiper mv
-  // swiper1
-  var slider1 = new Swiper(".slider1", {
+  var slider1 = new Swiper(".js-slider-mv", {
     loop: true,
     effect: "fade",
     autoplay: {
