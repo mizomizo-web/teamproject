@@ -33,7 +33,8 @@ jQuery(function ($) {
       ($(".slider1").height() ||
         $(".p-sub-fv").height() ||
         $(".p-single-work__title").height() ||
-        $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) < $(this).scrollTop()
+        $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) <
+      $(this).scrollTop()
     ) {
       $(".p-header").css("background", "rgba(17,17,17,1)");
     } else {
@@ -104,7 +105,7 @@ jQuery(function ($) {
   });
 
   // swiper2
-  var slider2 = new Swiper(".slider2", {
+  var slider2 = new Swiper(".js-slider-work", {
     loop: true,
     effect: "slide",
     autoplay: {
@@ -173,14 +174,13 @@ jQuery(function ($) {
   });
 
   // スマホのアドレスバーを考慮
-	$(document).ready(function(){
-		var heroHeight = $(window).height();
-		$('.slide-image1, .slide-image2, .slide-image3').height(heroHeight);
-	});
-
-	$(window).resize(function () {
+  $(document).ready(function () {
     var heroHeight = $(window).height();
-    $('.slide-image1, .slide-image2, .slide-image3').height(heroHeight);
-	});
+    $(".slide-image1, .slide-image2, .slide-image3").height(heroHeight);
+  });
 
+  $(window).resize(function () {
+    var heroHeight = $(window).height();
+    $(".slide-image1, .slide-image2, .slide-image3").height(heroHeight);
+  });
 });
