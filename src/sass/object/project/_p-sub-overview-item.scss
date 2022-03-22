@@ -10,7 +10,7 @@
   }
 }
 
-.p-sub-overview-item dt {
+.p-sub-overview-item__title {
   width: 100%;
   max-width: rem(57);
   padding-left: rem(5);
@@ -20,7 +20,7 @@
   }
 }
 
-.p-sub-overview-item dd {
+.p-sub-overview-item__description {
   width: calc(100% - #{rem(57)}- #{rem(57)});
   margin-left: rem(57);
   @include mq(md) {
