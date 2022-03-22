@@ -7,7 +7,7 @@
 .slide-image1,
 .slide-image2,
 .slide-image3 {
-	width: 100%;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center center;
@@ -15,30 +15,30 @@
 }
 
 .slide-image1 {
-	background-image: url(../images/top/mv01-sp.jpg);
+  background-image: url(../images/top/mv01-sp.jpg);
 
-  @include mq('md') {
+  @include mq("md") {
     background-image: url(../images/top/mv01-pc.jpg);
   }
 }
 
 .slide-image2 {
-	background-image: url(../images/top/mv02-sp.jpg);
+  background-image: url(../images/top/mv02-sp.jpg);
 
-  @include mq('md') {
+  @include mq("md") {
     background-image: url(../images/top/mv02-pc.jpg);
   }
 }
 
 .slide-image3 {
-	background-image: url(../images/top/mv03-sp.jpg);
+  background-image: url(../images/top/mv03-sp.jpg);
 
-  @include mq('md') {
+  @include mq("md") {
     background-image: url(../images/top/mv03-pc.jpg);
   }
 }
 
-.slide-content {
+.p-mv-content {
   content: "";
   position: absolute;
   top: 50%;
@@ -50,23 +50,23 @@
   text-align: center;
 }
 
-.slide-content__head h1 {
+.p-mv-content__head h1 {
   font-size: rem(28);
   font-weight: bold;
   letter-spacing: 0.05em;
 
-  @include mq('md') {
+  @include mq("md") {
     font-size: rem(50);
   }
 }
 
-.slide-content__txt {
+.p-mv-content__txt {
   font-size: rem(20);
   font-weight: bold;
   letter-spacing: 0.05em;
   margin-top: rem(24);
 
-  @include mq('md') {
+  @include mq("md") {
     font-size: rem(25);
   }
 }
