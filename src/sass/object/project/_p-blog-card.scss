@@ -9,6 +9,7 @@
 		max-width: rem(350);
 		display: flex;
 		flex-direction: column;
+		transition: background 0.3s;
 	}
 }
 
@@ -18,11 +19,6 @@
 	@include mq('md') {
 		.p-blog-card__img img {
 			transform: scale(1.1);
-		}
-
-		.p-blog-card__textbox,
-		.p-blog-card__meta {
-			background-color: $gray;
 		}
 
 		.p-blog-card__textbox,
