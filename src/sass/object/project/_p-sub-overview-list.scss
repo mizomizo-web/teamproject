@@ -5,57 +5,60 @@
   border-bottom: 1px solid $white;
 }
 
-.p-sub-overview-list__item:first-child {  
-  padding: rem(18) 0 rem(19);
-  @include mq(md) {
-    padding: rem(32) 0 rem(28);
+.p-sub-overview-list .p-sub-overview-list__item {
+  &:nth-child(1) {
+    padding: rem(18) 0 rem(19);
+    @include mq(md) {
+      padding: rem(32) 0 rem(28);
+    }
   }
-}
 
-.p-sub-overview-list__item:nth-child(2) {
-  padding: rem(17) 0 rem(19);
-  @include mq(md) {
-    padding: rem(30) 0 rem(28);
+  &:nth-child(2) {
+    padding: rem(17) 0 rem(19);
+    @include mq(md) {
+      padding: rem(30) 0 rem(28);
+    }
   }
-}
 
-.p-sub-overview-list__item:nth-child(3) {
-  padding: rem(14) 0 rem(19);
-  @include mq(md) {
-    padding: rem(30) 0 rem(28);
+  &:nth-child(3) {
+    padding: rem(14) 0 rem(19);
+    @include mq(md) {
+      padding: rem(30) 0 rem(28);
+    }
   }
-}
 
-.p-sub-overview-list__item:nth-child(4) {
-  padding: rem(11) 0 rem(19);
-  @include mq(md) {
-    padding: rem(34) 0 rem(28);
+  &:nth-child(4) {
+    padding: rem(11) 0 rem(19);
+    @include mq(md) {
+      padding: rem(34) 0 rem(28);
+    }
   }
-}
 
-.p-sub-overview-list__item:nth-child(5) {
-  padding: rem(11) 0 rem(19);
-  @include mq(md) {
-    padding: rem(38) 0 rem(28);
+  &:nth-child(5) {
+    padding: rem(11) 0 rem(19);
+    @include mq(md) {
+      padding: rem(38) 0 rem(28);
+    }
   }
-}
-.p-sub-overview-list__item:nth-child(6) {
-  padding: rem(14) 0 rem(19);
-  @include mq(md) {
-    padding: rem(35) 0 rem(28);
-  }
-}
 
-.p-sub-overview-list__item:nth-child(7) {
-  padding: rem(14) 0 rem(19);
-  @include mq(md) {
-    padding: rem(34) 0 rem(28);
+  &:nth-child(6) {
+    padding: rem(14) 0 rem(19);
+    @include mq(md) {
+      padding: rem(35) 0 rem(28);
+    }
   }
-}
 
-.p-sub-overview-list__item:nth-child(8) {
-  padding: rem(14) 0 rem(19);
-  @include mq(md) {
-    padding: rem(34) 0 rem(28);
+  &:nth-child(7) {
+    padding: rem(14) 0 rem(19);
+    @include mq(md) {
+      padding: rem(34) 0 rem(28);
+    }
+  }
+
+  &:nth-child(8) {
+    padding: rem(14) 0 rem(19);
+    @include mq(md) {
+      padding: rem(34) 0 rem(28);
+    }
   }
 }

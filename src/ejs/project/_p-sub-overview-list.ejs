@@ -9,12 +9,10 @@
   {title:"所在地", description:"東京駅"}
 ] %>
 
-<div class="p-sub-overview-list">
-  <div class="p-sub-overview-list__items">
-    <% for (var item of listItem) {%>
-      <div class="p-sub-overview-list__item">
-        <%- include('./_p-sub-overview-item',{title:item.title, description:item.description}) %>
-      </div>
-    <% } %>
-  </div>
-</div>
+<ul class="p-sub-overview-list">
+  <% for (var item of listItem) {%>
+    <li class="p-sub-overview-list__item">
+      <%- include('./_p-sub-overview-item',{title:item.title, description:item.description}) %>
+    </li>
+  <% } %>
+</ul>

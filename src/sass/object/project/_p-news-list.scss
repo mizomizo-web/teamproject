@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.p-news-list {
+  
+}
+
 .p-news-list__item {
   & + & {
     margin-top: rem(32);

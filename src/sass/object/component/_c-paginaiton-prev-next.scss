@@ -1,5 +1,12 @@
 @use "global" as *;
 
+.c-pagination-prev-next {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(332);
+  width: 100%;
+}
+
 .c-pagination-prev-next__items {
   display: flex;
   justify-content: center;

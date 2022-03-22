@@ -1,10 +1,16 @@
 @use "global" as *;
 
-.p-single-news__inner {
+.p-single-news__breadcrumb {
+	margin-top: rem(66);
+}
+
+.p-single-news__article {
+	margin-top: rem(78);
+
 	@include mq('md') {
 		max-width: rem(800);
 		width: 100%;
-		margin: 0 auto;
+		margin: rem(91) auto 0;
 	}
 }
 

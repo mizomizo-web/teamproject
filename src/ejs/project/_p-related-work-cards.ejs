@@ -1,3 +1,7 @@
+<%# 以下をsingle-works.ejsに記述 %>
+<%# var location = {page_id:'single-works'} %>
+<%#- include('./project/_p-related-work-cards', {page: location}) %>
+
 <%
   imagePath = "./images";
 %>
@@ -10,10 +14,10 @@
 ] %>
 
   <div class="p-related-work-cards">
-    <ul class="p-related-work-cards__items">
+    <ul class="p-related-work-cards__list">
       <% for (var item of cardItem) {%>
         <li class="p-related-work-cards__item">
-          <%- include('./_p-related-work-card',{src:item.src, alt:item.alt, title:item.title, excerpt:item.excerpt, category:item.category, datetime:item.datetime, time:item.time}) %>
+          <%- include('./_p-work-card',{src:item.src, alt:item.alt, title:item.title, excerpt:item.excerpt, category:item.category, datetime:item.datetime, time:item.time}) %>
         </li>
       <% } %>
     </ul>

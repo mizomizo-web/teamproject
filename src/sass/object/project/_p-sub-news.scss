@@ -5,10 +5,12 @@
 	max-width: rem(540);
 	width: 100%;
 	height: inherit;
+	padding-top: rem(85);
 	padding-right: $padding-sp;
 	padding-left: $padding-sp;
 	@include mq(md) {
 		max-width: rem(912);
+		padding-top: rem(69);
 		padding-right: $padding-pc;
 		padding-left: $padding-pc;
 	}

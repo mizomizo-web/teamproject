@@ -3,23 +3,13 @@
 // 共通
 .c-btn {
   display: inline-block;
-  font-size: rem(20);
-  line-height: calc(29/20);
-  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
-  max-width: rem(360);
-  padding: rem(10) 0;
-  margin: 0 auto;
   width: 100%;
   position: relative;
   z-index: 1;
- 
+
   @include mq(md) {
-    font-size: rem(16);
-    line-height: 1;
-    letter-spacing: 0.125em;
-    padding: rem(20) 0;
     transition: color 0.3s;
 
     &:hover {
@@ -42,6 +32,22 @@
     &:hover::before {
       width: 100%;
     }
+  }
+}
+
+// 共通ボタン
+.c-btn--default {
+  font-size: rem(20);
+  line-height: calc(29/20);
+  letter-spacing: 0.1em;
+  max-width: rem(360);
+  padding: rem(10) 0;
+
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 1;
+    letter-spacing: 0.125em;
+    padding: rem(20) 0;
   }
 }
 
@@ -78,7 +84,7 @@
   }
 }
 
-// SP時背景グレー＆サイズ通常・PC時背景白＆サイズ小（TOPニュース）
+// SP時背景グレー＆サイズ通常・PC時背景白＆サイズ小（TOPページのニュース）
 .c-btn--top-news {
   background-color: $gray;
   border: 1px solid $white;
@@ -107,5 +113,18 @@
     &::before {
       background-color: $gray;
     }
+  }
+}
+
+.c-btn--pc-hidden {
+  @include mq(md) {
+    display: none; 
+  }
+}
+
+.c-btn--sp-hidden {
+  display: none;
+  @include mq(md) {
+    display: inline-block;
   }
 }

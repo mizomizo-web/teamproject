@@ -12,21 +12,30 @@
     <!-- 下層ファーストビュー -->
     <%- include('./project/_p-sub-fv', {page: location, name: 'content', alt: '事業内容', title: '事業内容'}) %>
     
-    <!-- パンくずリスト -->
-    <div class="l-breadcrumb">
-      <div class="l-inner">
-        <%-include('./component/_c-breadcrumb',{
-          categoryName:'事業内容',
-          postName:'',
-          src:'content.html'
-          })
-        %>
-      </div>
-    </div>
-
     <!-- 事業内容セクション -->
-    <section class="l-sub-content">
-      <%- include('./project/_p-sub-content') %>
+    <section class="p-sub-content l-sub-content">
+      <div class="p-sub-content__inner l-inner">
+        <!-- パンくずリスト -->
+        <div class="p-sub-content__breadcrumb">
+          <%-include('./component/_c-breadcrumb',{
+            categoryName:'事業内容',
+            postName:'',
+            src:'content.html'
+            })
+          %>
+        </div>
+
+        <!-- 事業内容タイトルなど -->
+        <div class="p-sub-content__head">
+          <h2 class="p-sub-content__title">企業理念</h2>
+          <p class="p-sub-content__description">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+        </div>
+
+        <!-- 事業内容リスト -->
+        <div class="p-sub-content__items">
+          <%- include('./project/_p-sub-contents') %>
+        </div>
+      </div>
     </section>
 
     <!-- お問い合わせ -->

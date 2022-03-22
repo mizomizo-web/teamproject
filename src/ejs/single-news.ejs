@@ -9,21 +9,30 @@
 		<%- include('./common/_p-header') %>
 	</header>
 
-	<!-- パンくずリスト -->
-	<div class="l-single-breadcrumb">
-		<div class="l-inner">
-			<%-include('./component/_c-breadcrumb',{
-				categoryName:'お知らせ一覧',
-				postName:'お知らせ詳細',
-				src:'news.html'
-				})
-			%>
-		</div>
-	</div>
+	<!-- お知らせ詳細セクション -->
+	<section class="p-single-news l-single-news">
+		<div class="p-single-news__inner l-inner">
 
-	<!-- 記事コンテンツ -->
-	<section class="l-single-news">
-		<%- include('./project/_p-single-news') %>
+			<!-- パンくずリスト -->
+			<div class="p-single-news__breadcrumb">
+				<%-include('./component/_c-breadcrumb',{
+					categoryName:'お知らせ一覧',
+					postName:'お知らせ詳細',
+					src:'single-news.html'
+					})
+				%>
+			</div>
+
+      <!-- 記事コンテンツ -->
+			<article class="p-single-news__article">
+				<%- include('./project/_p-news-article', {page:location}) %>
+			</article>
+
+			<!-- ページネーション -->
+			<div class="p-single-news__pagination">
+				<%- include('./component/_c-pagination-prev-next', {page: location}) %>
+			</div>
+		</div>
 	</section>
 
 	<!-- お問い合わせ -->

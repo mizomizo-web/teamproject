@@ -12,20 +12,22 @@
     <!-- 下層ファーストビュー -->
     <%- include('./project/_p-sub-fv', {page: location, name: 'contact', alt: 'お問い合わせ', title: 'お問い合わせ'}) %>
 
-    <!-- パンくずリスト -->
-    <div class="p-sub-contact__breadcrumb">
+    <section class="p-sub-contact l-sub-contact">
       <div class="p-sub-contact__inner l-inner">
-        <%-include('./component/_c-breadcrumb',{
-          categoryName:'お問い合わせ',
-          postName:'',
-          src:'contact.html'
-          })
-        %>
-      </div>
-    </div>
+        <!-- パンくずリスト -->
+        <div class="p-sub-contact__breadcrumb">
+          <%-include('./component/_c-breadcrumb',{
+            categoryName:'お問い合わせ',
+            postName:'',
+            src:'contact.html'
+            })
+          %>
+        </div>
 
-    <section class="l-sub-contact">
-      <%- include('./project/_p-sub-contact', {page: location}) %>
+				<div class="p-sub-contact__container">
+					<%- include('./project/_p-sub-contact-list', {page: location}) %>
+				</div>
+      </div>
     </section>
 
     <!-- フッター -->

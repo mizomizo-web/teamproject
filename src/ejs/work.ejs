@@ -12,23 +12,32 @@
     <!-- 下層ファーストビュー -->
     <%- include('./project/_p-sub-fv', {page: location, name: 'work', alt: '制作実績', title: '制作実績'}) %>
 
-    <!-- パンくずリスト -->
-    <div class="l-breadcrumb">
-      <div class="l-inner">
-        <%-include('./component/_c-breadcrumb',{
-          categoryName:'制作実績',
-          postName:'',
-          src:'work.html'
-          })
-        %>
+    <section class="p-sub-work-cards-head l-sub-work-cards-head">
+      <div class="p-sub-work-cards-head__inner">
+        <!-- パンくずリスト -->
+        <div class="p-sub-work-cards-head__breadcrumb">
+          <%-include('./component/_c-breadcrumb',{
+            categoryName:'制作実績',
+            postName:'',
+            src:'work.html'
+            })
+          %>
+        </div>
+				<!-- カテゴリーリスト -->
+				<div class="p-sub-blog__category">
+					<%- include('./component/_c-category-list') %>
+				</div>
+
+				<div class="p-sub-work-cards-head__list">
+					<%- include('./project/_p-sub-work-cards', {page: location}) %>
+				</div>
+        <!-- ページネーション -->
+        <div class="p-sub-blog__pagination">
+          <%- include('./component/_c-pagination') %>
+        </div>
       </div>
-    </div>
-
-    <div class="l-sub-work">
-      <%- include('./project/_p-sub-work', {page: location}) %>
-    </div>
-
-    <!-- お問い合わせ -->
+    </section>
+		<!-- お問い合わせ -->
 		<section class="l-common-contact">
 			<%- include('./project/_p-common-contact') %>
 		</section>

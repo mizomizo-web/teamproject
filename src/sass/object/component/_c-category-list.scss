@@ -3,7 +3,7 @@
 .c-category-list__items {
   display: flex;
   flex-wrap: wrap;
-  margin: rem(-16) 0 0 rem(-26);
+  margin: rem(-16) 0 0 rem(-24);
   
   @include mq(md) {
     margin: initial;
