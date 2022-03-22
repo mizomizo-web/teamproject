@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('./common/_head') %>
+<body>
+	<% var location = {page_id:'single-work'} %>
+
+	<!-- ヘッダー -->
+	<header class="l-header">
+		<%- include('./common/_p-header') %>
+	</header>
+
+	<!-- 制作実績詳細記事セクション -->
+	<section class="p-single-work-head l-single-work-head">
+		<div class="p-single-work-head__inner l-inner">
+
+			<!-- パンくずリスト -->
+			<div class="p-single-work-head__breadcrumb">
+				<%-include('./component/_c-breadcrumb',{
+					categoryName:'制作実績',
+					postName:'制作実績詳細',
+					src:'work.html'
+					})
+				%>
+			</div>
+			<div class="p-single-work-head__wrapper">
+				<%- include('./project/_p-single-work') %>
+			</div>
+
+			<!-- ページネーション -->
+			<div class="p-single-work__pagination">
+				<%- include('./component/_c-pagination-prev-next', {page: location}) %>
+			</div>
+		
+		</div>
+	</section>
+	
+	<!-- 関連記事セクション -->
+	<section class="l-related-work">
+		<%- include('./project/_p-related-work') %>
+	</section>
+
+	<!-- お問い合わせ -->
+	<section class="l-common-contact">
+		<%- include('./project/_p-common-contact') %>
+	</section>
+
+	<!-- フッター -->
+	<%- include('./common/_p-footer') %>
+
+	<!-- ページトップ -->
+	<%- include('./component/_c-pagetop') %>
+</body>
+</html>

@@ -16,21 +16,21 @@
 
 .p-footer-nav__item {
   letter-spacing: 0.075em;
-  margin-top: rem(8);
   text-align: center;
 
   @include mq(md) {
     letter-spacing: 0.125em;
     line-height: calc(35/16);
-    margin-top: 0;
     margin-left: rem(30);
   }
 }
 
 .p-footer-nav__item a {
   display: block;
+  padding: rem(4) 0;
 
   @include mq(md) {
+    padding: initial;
     position: relative;
   
     &::after {

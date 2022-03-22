@@ -6,11 +6,11 @@
 
     <!-- ヘッダー -->
     <header class="l-header">
-      <%- include('./project/_p-header') %>
+      <%- include('./common/_p-header') %>
     </header>
 
     <!-- 下層ファーストビュー -->
-    <%- include('./project/_p-sub-fv', {page: location}) %>
+    <%- include('./project/_p-sub-fv', {page: location, name: 'content', alt: '事業内容', title: '事業内容'}) %>
     
     <!-- 事業内容セクション -->
     <section class="p-sub-content l-sub-content">
@@ -33,7 +33,7 @@
 
         <!-- 事業内容リスト -->
         <div class="p-sub-content__items">
-          <%- include('./project/_p-sub-contents', {page: location}) %>
+          <%- include('./project/_p-sub-contents') %>
         </div>
       </div>
     </section>
@@ -44,7 +44,7 @@
     </section>
 
     <!-- フッター -->
-    <%- include('./project/_p-footer') %>
+    <%- include('./common/_p-footer') %>
 
     <!-- ページトップ -->
     <%- include('./component/_c-pagetop') %>

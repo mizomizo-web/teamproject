@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.p-sub-overview__list {
+  color: $white;
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(115);
+  }
+}

@@ -20,6 +20,8 @@
 	width: rem(70);
 	height: inherit;
 	margin-left: rem(22);
+	position: relative;
+	z-index: 1200;
 
 	@include mq('md') {
 		width: rem(94);

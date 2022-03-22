@@ -1,84 +1,90 @@
 @use "global" as *;
 
 .p-top-work {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .p-top-work__inner {
-	padding-top: rem(50);
-	margin: 0 auto;
+  padding-top: rem(50);
+  margin: 0 auto;
 
-	@include mq('md') {
-		padding-top: rem(63);
-	}
+  @include mq("md") {
+    padding: rem(63) rem(25) 0;
+  }
 }
 
 .p-top-work__bg {
-	@include mq('md') {
-		background-image: linear-gradient(90deg,#111 0%,#111 30%,#333 30%,#333 100%);
-		margin: rem(48) calc(50% - 50vw) 0;
-		width: 100vw;
-		padding: rem(80) rem(25);
-	}
+  @include mq("md") {
+    background-image: linear-gradient(
+      90deg,
+      #111 0%,
+      #111 30%,
+      #333 30%,
+      #333 100%
+    );
+    margin: rem(48) calc(50% - 50vw) 0;
+    width: 100vw;
+    padding: rem(80) rem(25);
+  }
 }
 
 .p-top-work__slide {
-	margin-top: rem(48);
+  margin-top: rem(48);
 
-	@include mq('md') {
-		margin-top: 0;
-	}
+  @include mq("md") {
+    margin-top: 0;
+  }
 }
 
 .p-top-work__wrapper {
-	@include mq('md') {
-		display: flex;
-		align-items: center;
-		max-width: rem(1100);
-		width: 100%;
-		margin: auto;
-	}
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    max-width: rem(1100);
+    width: 100%;
+    margin: auto;
+  }
 }
 
-.p-top-work__cont {
-	position: relative;
+.p-top-work__content {
+  position: relative;
 
-	@include mq('md') {
-		max-width: rem(557);
-		width: 100%;
-	}
+  @include mq("md") {
+    max-width: rem(557);
+    width: 100%;
+  }
 }
 
 // 背景線SP
-.p-top-work__cont::before {
-	content: "";
-	position: absolute;
+.p-top-work__content::before {
+  content: "";
+  position: absolute;
 }
 
 .slide-image4,
 .slide-image5,
 .slide-image6 {
-	width: 100%;
+  width: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-	padding-top: 69.6%;
+  padding-top: 69.6%;
 
-	@include mq('md') {
-		padding-top: 69.838%;
-	}
+  @include mq("md") {
+    padding-top: 69.838%;
+  }
 }
 
 .slide-image4 {
-	background-image: url(../images/top/work01.jpg);
+  background-image: url(../images/top/work01.jpg);
 }
 
 .slide-image5 {
-	background-image: url(../images/top/work02.jpg);
+  background-image: url(../images/top/work02.jpg);
 }
 
 .slide-image6 {
-	background-image: url(../images/top/work03.jpg);
+  background-image: url(../images/top/work03.jpg);
 }
 
 // ページネーション
@@ -91,7 +97,7 @@
   width: rem(46);
   height: rem(8);
 
-  @include mq('md') {
+  @include mq("md") {
     bottom: rem(-15) !important;
     left: 44% !important;
     transform: translateX(-50%) !important;
@@ -103,7 +109,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #F9F871 !important;
+  background-color: #f9f871 !important;
 }
 
 .swiper-pagination-bullet:not(:first-child) {
@@ -111,48 +117,48 @@
 }
 
 .p-top-work__textbox {
-	margin: 0 auto ;
-	padding: rem(24) rem(20) rem(20);
-	color: $white;
-	background-color: $gray;
+  margin: 0 auto;
+  padding: rem(24) rem(20) rem(20);
+  color: $white;
+  background-color: $gray;
 
-	@include mq('md') {
-		max-width: rem(510);
-		width: 100%;
-		padding: 0;
-		margin-left: rem(32);
-	}
+  @include mq("md") {
+    max-width: rem(510);
+    width: 100%;
+    padding: 0;
+    margin-left: rem(32);
+  }
 }
 
 .p-top-work__head {
-	font-size: rem(20);
-	font-weight: $regular;
-	text-align: center;
-	letter-spacing: 0.15em;
+  font-size: rem(20);
+  font-weight: $regular;
+  text-align: center;
+  letter-spacing: 0.15em;
 
-	@include mq('md') {
-		font-size: rem(25);
-		text-align: left;
-	}
+  @include mq("md") {
+    font-size: rem(25);
+    text-align: left;
+  }
 }
 
 .p-top-work__text {
-	margin-top: rem(24);
-	letter-spacing: 0.15em;
+  margin-top: rem(24);
+  letter-spacing: 0.15em;
 
-	@include mq('md') {
-		margin-top: rem(48);
-		line-height: calc(35 / 16);
+  @include mq("md") {
+    margin-top: rem(48);
+    line-height: calc(35 / 16);
     letter-spacing: 0.04em;
-	}
+  }
 }
 
 .p-top-work__button {
-	margin-top: rem(16);
-	text-align: center;
+  margin-top: rem(16);
+  text-align: center;
 
-	@include mq('md') {
-		margin-top: rem(48);
-		text-align: left;
-	}
+  @include mq("md") {
+    margin-top: rem(48);
+    text-align: left;
+  }
 }

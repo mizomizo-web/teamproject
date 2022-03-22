@@ -1,0 +1,58 @@
+@use "global" as *;
+
+// :root {
+//   --vw: 1vw;
+// }
+
+.c-bg-line--top {
+	position: relative;
+	display: block;
+}
+
+.c-bg-line--top::before {
+	content: "";
+	position: absolute;
+	width: 206%;
+	// width: calc( var(--vw) * 206 );
+	height: 1px;
+	top: rem(12);
+	left: 0;
+	transform: rotate(61deg);
+	transform-origin: 0% 0%;
+	background-color: #F9F871;
+	z-index: -1;
+
+	@include mq('md') {
+		top: rem(-68);
+		left: 0;
+		transform: rotate(45deg);
+		width: 141.419%;
+		// width: calc( var(--vw) * 141.419 );
+	}
+}
+
+.c-bg-line--bottom {
+	position: relative;
+		display: block;
+}
+
+.c-bg-line--bottom::before {
+	content: "";
+	position: absolute;
+	width: 386.13%;
+	// width: calc( var(--vw) * 386.13 );
+	height: 1px;
+	top: rem(43);
+	left: 0;
+	transform: rotate(-75deg);
+	transform-origin: 0% 0%;
+	background-color: #F9F871;
+	z-index: -1;
+
+	@include mq('md') {
+		top: rem(237);
+		width: 141.37%;
+		// width: calc( var(--vw) * 141.37 );
+		transform: rotate(-45deg);
+	}
+}

@@ -1,52 +1,5 @@
 @use "global" as *;
 
-.bg-line-top {
-	position: relative;
-}
-
-.bg-line-top::before {
-	content: "";
-	position: absolute;
-	width: 206.93vw;
-	height: 1px;
-	top: rem(12);
-	left: 0;
-	transform: rotate(61deg);
-	transform-origin: 0% 0%;
-	background-color: #F9F871;
-	z-index: -1;
-
-	@include mq('md') {
-		top: rem(-68);
-		left: 0;
-		transform: rotate(45deg);
-		width: 141.419vw;
-	}
-}
-
-.bg-line-bottom {
-	position: relative;
-}
-
-.bg-line-bottom::before {
-	content: "";
-	position: absolute;
-	width: 386.13vw;
-	height: 1px;
-	top: rem(43);
-	left: 0;
-	transform: rotate(-75deg);
-	transform-origin: 0% 0%;
-	background-color: #F9F871;
-	z-index: -1;
-
-	@include mq('md') {
-		top: rem(237);
-		width: 141.4876vw;
-		transform: rotate(-45deg);
-	}
-}
-
 .p-top-contents__inner {
 	padding-top: rem(50);
 

@@ -5,8 +5,6 @@
 }
 
 .p-top-blog-cards__inner {
-	max-width: rem(600);
-	width: 100%;
 	padding-top: rem(50);
 
 	@include mq('md') {
@@ -26,10 +24,18 @@
 }
 
 .p-top-blog-cards__item {
+	background-color: $white;
+	display: block;
 
 	@include mq('md') {
     width: calc(33.3333% - #{rem(25)}* 2 / 3);
+		display: flex;
+		transition: all 0.3s;
 	}
+}
+
+.p-top-blog-cards__item:hover {
+
 }
 
 .p-top-blog-cards__item + .p-top-blog-cards__item {

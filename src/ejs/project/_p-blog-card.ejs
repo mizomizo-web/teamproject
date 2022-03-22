@@ -1,9 +1,7 @@
-<!-- 以下をindex.ejsに記述 -->
-<%# var location = {page_id:'top'} %>
-<%#- include('./project/_p-top-blog-cards', {page: location}) %>
 
-<article class="p-blog-card">
-  <a href="single-blog.html" class="p-blog-card__link">
+<%# TOPはタイトルをh3タグに %>
+<% if (page.page_id == 'top') { %>
+  <a class="p-blog-card" href="single-blog.html">
     <figure class="p-blog-card__img">
       <img src="<%= src %>" alt="<%= alt %>" />
     </figure>
@@ -16,4 +14,19 @@
       <time class="p-blog-card__time" datetime="2021-07-20"><%= time %></time>
     </div>
   </a>
-</article>
+<%# 下層はタイトルをh2タグに %>
+<% } else if (page.page_id == 'blog') { %>
+  <a class="p-blog-card" href="single-blog.html">
+    <figure class="p-blog-card__img">
+      <img src="<%= src %>" alt="<%= alt %>" />
+    </figure>
+    <div class="p-blog-card__textbox">
+      <h2 class="p-blog-card__title"><%= title %></h2>
+      <p class="p-blog-card__text"><%= text %></p>
+    </div>
+    <div class="p-blog-card__meta">
+      <span class="p-blog-card__category"><%= category %></span>
+      <time class="p-blog-card__time" datetime="2021-07-20"><%= time %></time>
+    </div>
+  </a>
+<% } %>

@@ -1,40 +1,36 @@
-<%
-  var localmeta = {
-    jaTitle: '制作実績',
-    enTitle: 'works',
-  };
-%>
+<% var localmeta = { jaTitle: '制作実績', enTitle: 'works', }; %>
 
 <div class="p-top-work">
-	<div class="p-top-work__inner">
-		<div class="p-top-work__title">
-			<%- include('../component/_c-title.ejs', {meta: localmeta}) %>
-		</div>
-		<div class="p-top-work__bg">
-			<div class="p-top-work__wrapper">
-				<div class="p-top-work__cont">
-					<div class="swiper slider2 p-top-work__slide">
-						<div class="swiper-wrapper">
-							<% for (var i=4; i < 7; i++) { %>
-							<div class="swiper-slide">
-								<div class="slide-image<%= i %>"></div>
-							</div>
-							<% } %>
-						</div>
-					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-		
-				<div class="p-top-work__textbox">
-					<h3 class="p-top-work__head">メインタイトルが入ります。</h3>
-					<p class="p-top-work__text">
-						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-					</p>
-					<div class="p-top-work__button">
-						<%- include('../component/_c-btn',{link:'work.html', text:'すべて見る', bgColor:'gray', location:''}) %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="p-top-work__inner">
+    <div class="p-top-work__title">
+      <%- include('./_p-title.ejs', {meta: localmeta}) %>
+    </div>
+    <div class="p-top-work__bg">
+      <div class="p-top-work__wrapper">
+        <div class="p-top-work__content">
+          <div class="swiper js-slider-work p-top-work__slide">
+            <div class="swiper-wrapper">
+              <% for (var i=4; i < 7; i++) { %>
+              <div class="swiper-slide">
+                <div class="slide-image<%= i %>"></div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="p-top-work__textbox">
+          <h3 class="p-top-work__head">メインタイトルが入ります。</h3>
+          <p class="p-top-work__text">
+            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+          </p>
+          <div class="p-top-work__button">
+            <%- include('../component/_c-btn',{link:'work.html',
+            text:'すべて見る', bgColor:'gray', location:''}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

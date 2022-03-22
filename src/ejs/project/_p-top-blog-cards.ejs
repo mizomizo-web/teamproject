@@ -22,18 +22,18 @@
 ] %>
 
 <div class="p-top-blog-cards">
-  <span class="bg-line-bottom"></span>
+  <span class="c-bg-line--bottom"></span>
   <div class="p-top-blog-cards__inner l-inner">
     <div class="p-top-blog-cards__title">
-			<%- include('../component/_c-title.ejs', {meta: localmeta}) %>
+			<%- include('./_p-title.ejs', {meta: localmeta}) %>
 		</div>
-    <ul class="p-top-blog-cards__list">
+    <div class="p-top-blog-cards__list">
       <% for (var item of cardItem) {%>
-        <li class="p-top-blog-cards__item">
+        <div class="p-top-blog-cards__item">
           <%- include('../project/_p-blog-card',{category:item.category, src:item.src, alt:item.alt, title:item.title, text:item.text, time:item.time}) %>
-        </li>
+        </div>
       <% } %>
-    </ul>
+    </div>
     <div class="p-top-blog-cards__button">
       <%- include('../component/_c-btn',{link:'blog.html', text:'すべて見る', bgColor:'gray', location:''}) %>
     </div>

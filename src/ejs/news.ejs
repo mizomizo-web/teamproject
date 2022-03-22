@@ -5,23 +5,28 @@
     <% var location = {page_id:'news'} %>
 
     <!-- ヘッダー -->
-    <%- include('./project/_p-header') %>
+    <header class="l-header">
+      <%- include('./common/_p-header') %>
+    </header>
 
     <!-- 下層ファーストビュー -->
-    <%- include('./project/_p-sub-fv', {page: location}) %>
+    <%- include('./project/_p-sub-fv', {page: location, name: 'news', alt: 'お知らせ', title: 'お知らせ'}) %>
     
     <!-- お知らせセクション -->
-    <section class="p-sub-news l-sub-news">
-      <div class="p-sub-news__inner">
+    <section class="p-sub-news l-sub-news"> 
+      <div class="l-inner">
         <!-- パンくずリスト -->
         <div class="p-sub-news__breadcrumb">
           <%-include('./component/_c-breadcrumb',{
-            categoryName:'お知らせ',
+            categoryName:'お知らせ一覧',
             postName:'',
             src:'news.html'
             })
           %>
         </div>
+      </div>
+
+      <div class="p-sub-news__inner">
         <!-- お知らせリスト -->
         <div class="p-sub-news__items">
           <%- include('./project/_p-news-list') %>
@@ -39,7 +44,7 @@
     </section>
 
     <!-- フッター -->
-    <%- include('./project/_p-footer') %>
+    <%- include('./common/_p-footer') %>
 
     <!-- ページトップ -->
     <%- include('./component/_c-pagetop') %>

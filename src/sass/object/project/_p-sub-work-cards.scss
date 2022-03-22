@@ -7,8 +7,21 @@
   }
 }
 
-.p-sub-work-cards__items {
-  
+.p-sub-work-cards__inner {
+  @include mq('md') {
+    max-width: rem(1100);
+    margin: 0 auto;
+  }
+}
+
+.p-sub-work-cards__item {
+  margin: 0 calc(50% - 50vw);
+	width: 100vw;
+
+  @include mq('md') {
+    margin: initial;
+    width: initial;
+  }
 }
 
 .p-sub-work-cards__item {

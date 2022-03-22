@@ -1,20 +1,15 @@
+<% const newsItem = [
+  {category:"お知らせ", src:"single-news.html", title:"記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。", datetime:"2021-07-20", time:"2021.07.20" }
+] %>
+
 <div class="p-top-news">
 	<div class="p-top-news__inner l-inner">
 		<ul class="p-top-news__lists">
-			<li class="p-top-news__lists p-top-news-item">
-				<div class="p-top-news-item__head">
-					<time datetime="<%= datetime %>" class="p-top-news-item__date"><%= time %></time>
-					<span class="p-top-news-item__category"><%= category %></span>
-				</div>
-				<h2 class="p-top-news-item__body">
-					<a href="#!" class="p-top-news-item__link">
-						<p class="p-top-news-item__title"><%= title %></p>
-					</a>
-				</h2>
-				<div class="p-top-news-item__button">
-					<%- include('../component/_c-btn',{link:'news.html', text:'すべて見る', bgColor:'', location:'top-news'}) %>
-				</div>
-			</li>
+      <% for (var item of newsItem) {%>
+        <div class="p-top-news__list">
+          <%- include('../project/_p-top-news-item',{category:item.category, src:item.src, title:item.title, datetime:item.datetime, time:item.time}) %>
+        </div>
+      <% } %>
 		</ul>
 	</div>
 </div>

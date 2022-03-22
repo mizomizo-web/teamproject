@@ -30,7 +30,11 @@ jQuery(function ($) {
   // ヘッダー
   $(window).on("scroll", function () {
     if (
-      ($(".slider1").height() || $(".p-sub-fv").height()) < $(this).scrollTop()
+      ($(".slider1").height() ||
+        $(".p-sub-fv").height() ||
+        $(".p-single-work__title").height() ||
+        $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) <
+      $(this).scrollTop()
     ) {
       $(".p-header").css("background", "rgba(17,17,17,1)");
     } else {
@@ -56,6 +60,12 @@ jQuery(function ($) {
     // $('body').css('overflow-y', 'hidden');  // 本文の縦スクロールを無効
   });
 
+  //ページ遷移時にドロワーを閉じる
+  $(".js-sp-nav__item a").on("click", function () {
+    $(".js-hamburger").removeClass("is-active");
+    $(".js-nav-menu").fadeOut();
+  });
+
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
   $(document).on("click", 'a[href*="#"]', function () {
     let time = 400;
@@ -67,6 +77,7 @@ jQuery(function ($) {
     return false;
   });
 
+  // カテゴリリストのタブクリック
   $(".js-category-item__link").on("click", function () {
     $(".c-category-item__link").removeClass("is-active");
     $(this).addClass("is-active");
@@ -83,8 +94,7 @@ jQuery(function ($) {
   });
 
   // swiper mv
-  // swiper1
-  var slider1 = new Swiper(".slider1", {
+  var slider1 = new Swiper(".js-slider-mv", {
     loop: true,
     effect: "fade",
     autoplay: {
@@ -95,7 +105,7 @@ jQuery(function ($) {
   });
 
   // swiper2
-  var slider2 = new Swiper(".slider2", {
+  var slider2 = new Swiper(".js-slider-work", {
     loop: true,
     effect: "slide",
     autoplay: {
@@ -112,5 +122,65 @@ jQuery(function ($) {
       el: ".swiper-scrollbar",
       hide: true,
     },
+  });
+
+  // single-swiper
+  //メイン
+  var slider = new Swiper(".gallery-slider", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop: true,
+    loopedSlides: 8, //スライドの枚数と同じ値を指定
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  //サムネイル
+  var thumbs = new Swiper(".gallery-thumbs", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    centeredSlides: true,
+    autoplay: true,
+    speed: 1000,
+    loop: true,
+    slideToClickedSlide: true,
+    breakpoints: {
+      // 768px以上の場合
+      768: {
+        spaceBetween: 8,
+        centeredSlides: false,
+      },
+    },
+  });
+
+  //4系～
+  //メインとサムネイルを紐づける
+  slider.controller.control = thumbs;
+  thumbs.controller.control = slider;
+
+  // リサイズイベント
+  $(window).resize(function () {
+    var $window = $(this).width();
+    var bp = 767;
+    if ($window > bp) {
+      $(".js-hamburger").removeClass("is-active");
+      $(".js-nav-menu").fadeOut();
+    } else {
+      $(".p-sp-nav").hide();
+      $(".js-hamburger").removeClass("is-active");
+    }
+  });
+
+  // スマホのアドレスバーを考慮
+  $(document).ready(function () {
+    var heroHeight = $(window).height();
+    $(".slide-image1, .slide-image2, .slide-image3").height(heroHeight);
+  });
+
+  $(window).resize(function () {
+    var heroHeight = $(window).height();
+    $(".slide-image1, .slide-image2, .slide-image3").height(heroHeight);
   });
 });
