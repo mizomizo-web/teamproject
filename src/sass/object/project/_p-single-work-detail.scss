@@ -1,15 +1,5 @@
 @use "global" as *;
 
-.p-single-work-details__item {
-	max-width: rem(800);
-	width: 100%;
-	margin: auto;
-}
-
-.p-single-work-details__item + .p-single-work-details__item {
-	margin-top: rem(32);
-}
-
 .p-single-work-detail {
 	max-width: rem(600);
 	width: 100%;
@@ -17,10 +7,6 @@
 	@include mq('md') {
 		max-width: rem(800);
 	}
-}
-
-.p-single-work-detail__textbox {
-
 }
 
 .p-single-work-detail__title {
