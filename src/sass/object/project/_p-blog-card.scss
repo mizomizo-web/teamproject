@@ -39,10 +39,6 @@
   content: "";
   display: block;
   padding-top: 66.57143%;
-
-  @include mq('md') {
-    
-  }
 }
 
 .p-blog-card__img img {
@@ -53,6 +49,9 @@
   height: 100%;
   object-fit: cover;
 	object-position: center;
+	@include mq(md) {
+		transition: transform 0.3s;
+	}
 }
 
 .p-blog-card__textbox {
