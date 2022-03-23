@@ -35,9 +35,9 @@ jQuery(function ($) {
         $(".p-single-work__title").height() ||
         $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) < $(this).scrollTop()
     ) {
-      $(".p-header").css("background", "rgba(17,17,17,1)");
+      $(".js-header").css("background", "rgba(17,17,17,1)");
     } else {
-      $(".p-header").css("background", "rgba(17,17,17,0.5)");
+      $(".js-header").css("background", "rgba(17,17,17,0.5)");
     }
   });
 
