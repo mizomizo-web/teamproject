@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.p-single-work-details__item {
+	max-width: rem(800);
+	width: 100%;
+	margin: auto;
+}
+
+.p-single-work-details__item + .p-single-work-details__item {
+	margin-top: rem(32);
+}
