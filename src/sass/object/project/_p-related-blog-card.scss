@@ -1,29 +1,29 @@
 @use "global" as *;
 
 .p-related-blog-card {
+	display: block;
 	max-width: rem(600);
 	width: 100%;
-	margin: auto;
+	margin: 0 auto;
 	background-color: $white;
 
 	@include mq('md') {
 		max-width: rem(251);
+		display: flex;
+		flex-direction: column;
 	}
 }
 
 .p-related-blog-card:hover {
-	background-color: $gray;
-	opacity: 1;
 	@include mq('md') {
+		background-color: $gray;
+		opacity: 1;
+		
 		.p-related-blog-card__textbox,
 		.p-related-blog-card__time {
 			color: $white;
 		}
 	}
-}
-
-.p-related-blog-card__link {
-	// display: block;
 }
 
 .p-related-blog-card__img {
@@ -75,16 +75,19 @@
 	font-size: rem(14);
 	line-height: 1.857;
 	letter-spacing: 0.2em;
+	margin-top: rem(4);
 }
 
 .p-related-blog-card__meta {
 	padding: 0 rem(23) rem(16);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 
 	@include mq('md') {
 		padding-left: rem(8);
 		padding-right: rem(8);
+		margin-top: auto;
 	}
 }
 

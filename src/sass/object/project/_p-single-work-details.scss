@@ -1,11 +1,10 @@
 @use "global" as *;
 
-.p-single-work-details__item {
-	max-width: rem(800);
-	width: 100%;
-	margin: auto;
-}
-
 .p-single-work-details__item + .p-single-work-details__item {
+	display: block;
 	margin-top: rem(32);
+
+	@include mq('md') {
+		margin-top: rem(48);
+	}
 }

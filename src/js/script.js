@@ -30,7 +30,7 @@ jQuery(function ($) {
   // ヘッダー
   $(window).on("scroll", function () {
     if (
-      ($(".slider1").height() ||
+      ($(".js-slider-mv").height() ||
         $(".p-sub-fv").height() ||
         $(".p-single-work__title").height() ||
         $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) <

@@ -4,10 +4,17 @@
 	color: $white;
 }
 
-.p-single-work__title {
-	font-size: rem(20);
-	font-weight: $regular;
-	letter-spacing: 0.05em;
+.p-single-work__inner {
+	max-width: rem(540);
+	width: 100%;
+	margin: 0 auto;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	@include mq(md) {
+		max-width: rem(850);
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
 }
 
 .p-single-work__textbox {
@@ -25,7 +32,7 @@
 		margin-top: rem(104);
 	}
 }
-//ギャラリー
+
 .p-single-work__slider {
 	margin: rem(32) calc(50% - 50vw) 0;
 	width: 100vw;

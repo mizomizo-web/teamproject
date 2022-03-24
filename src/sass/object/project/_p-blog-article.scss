@@ -44,7 +44,6 @@
   padding-top: 74.92%; // 251/335*100%
   margin-top: rem(20);
   width: 100vw;
-  max-width: rem(500);
   margin-left: calc(50% - 50vw); // インナー幅を超えて表示
   margin-right: calc(50% - 50vw); // インナー幅を超えて表示
   transform: translate(calc(50vw - 50%)); // 中央揃え
@@ -52,7 +51,6 @@
     padding-top: 53.44%; // 427/799*100%
     margin-top: rem(36);
     width: initial;
-    max-width: initial;
     margin-left: initial;
     margin-right: initial;
     transform: initial;
@@ -145,7 +143,6 @@
   padding-top: 74.92%; // 251/335*100%
   margin-top: rem(24);
   width: 100vw;
-  max-width: rem(500);
   margin-left: calc(50% - 50vw); // インナー幅を超えて表示
   margin-right: calc(50% - 50vw); // インナー幅を超えて表示
   transform: translate(calc(50vw - 50%)); // 中央揃え
@@ -153,7 +150,6 @@
     padding-top: 53.44%; // 427/799*100%
     margin-top: rem(32);
     width: initial;
-    max-width: initial;
     margin-left: initial;
     margin-right: initial;
     transform: initial;

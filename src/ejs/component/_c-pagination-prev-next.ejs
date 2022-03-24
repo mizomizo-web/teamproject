@@ -1,43 +1,13 @@
-<% if (page.page_id == 'single-news') { %>
-  <div class="c-pagination-prev-next">
-    <ul class="c-pagination-prev-next__items">
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__prevlink" href="#">prev</a>
-      </li>
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__link" href="news.html">一覧</a>
-      </li>
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__nextlink" href="#">next</a>
-      </li>
-    </ul>
-  </div>
-<% } else if (page.page_id == 'single-work') { %>
-  <div class="c-pagination-prev-next">
-    <ul class="c-pagination-prev-next__items">
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__prevlink" href="#">prev</a>
-      </li>
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__link" href="work.html">一覧</a>
-      </li>
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__nextlink" href="#">next</a>
-      </li>
-    </ul>
-  </div>
-<% } else if (page.page_id == 'single-blog') { %>
-  <div class="c-pagination-prev-next">
-    <ul class="c-pagination-prev-next__items">
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__prevlink" href="#">prev</a>
-      </li>
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__link" href="blog.html">一覧</a>
-      </li>
-      <li class="c-pagination-prev-next__item">
-        <a class="c-pagination-prev-next__nextlink" href="#">next</a>
-      </li>
-    </ul>
-  </div>
-<% } %>
+<div class="c-pagination-prev-next">
+  <ul class="c-pagination-prev-next__items">
+    <li class="c-pagination-prev-next__item">
+      <a class="c-pagination-prev-next__prevlink" href="#">prev</a>
+    </li>
+    <li class="c-pagination-prev-next__item">
+      <a class="c-pagination-prev-next__link" href="<%= link %>">一覧</a>
+    </li>
+    <li class="c-pagination-prev-next__item">
+      <a class="c-pagination-prev-next__nextlink" href="#">next</a>
+    </li>
+  </ul>
+</div>
