@@ -35,9 +35,9 @@ jQuery(function ($) {
         $(".p-single-work__title").height() ||
         $(".p-news-article__thumbnail,.p-blog-article__thumbnail").height()) < $(this).scrollTop()
     ) {
-      $(".p-header").css("background", "rgba(17,17,17,1)");
+      $(".js-header").css("background", "rgba(17,17,17,1)");
     } else {
-      $(".p-header").css("background", "rgba(17,17,17,0.5)");
+      $(".js-header").css("background", "rgba(17,17,17,0.5)");
     }
   });
 
@@ -176,12 +176,12 @@ jQuery(function ($) {
   // スマホのアドレスバーを考慮
 	$(document).ready(function(){
 		var heroHeight = $(window).height();
-		$('.p-mv').height(heroHeight);
+		$('.slide-image1, .slide-image2, .slide-image3').height(heroHeight);
 	});
 
 	$(window).resize(function () {
     var heroHeight = $(window).height();
-    $('.p-mv').height(heroHeight);
+    $('.slide-image1, .slide-image2, .slide-image3').height(heroHeight);
 	});
 
 });
