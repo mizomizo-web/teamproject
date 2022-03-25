@@ -13,8 +13,8 @@
     <%- include('./project/_p-sub-fv', {page: location, name: 'contact', alt: 'お問い合わせ', title: 'お問い合わせ'}) %>
 
     <!-- パンくずリスト -->
-    <div class="p-sub-contact__breadcrumb">
-      <div class="p-sub-contact__inner l-inner">
+    <div class="l-breadcrumb">
+      <div class="l-inner">
         <%-include('./component/_c-breadcrumb',{
           categoryName:'お問い合わせ',
           postName:'',
@@ -29,7 +29,7 @@
     </section>
 
     <!-- フッター -->
-    <%- include('./common/_p-footer') %>
+    <%- include('./common/_p-footer', {page: location}) %>
 
     <!-- ページトップ -->
     <%- include('./component/_c-pagetop') %>

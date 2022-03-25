@@ -1,15 +1,35 @@
-<footer class="p-footer">
-  <div class="p-footer__inner">
-    <div class="p-footer__wrap">
-      <div class="p-footer__logo">
-        <%- include('../component/_c-logo') %>
+<%# 問い合わせページのみ上部との余白を付与 %>
+<% if (page.page_id == 'contact') { %>
+  <footer class="p-footer l-footer">
+    <div class="p-footer__inner">
+      <div class="p-footer__wrap">
+        <div class="p-footer__logo">
+          <%- include('../component/_c-logo') %>
+        </div>
+        <div class="p-footer__nav">
+          <%- include('../project/_p-footer-nav') %>
+        </div>
       </div>
-      <div class="p-footer__nav">
-        <%- include('../project/_p-footer-nav') %>
+      <div class="p-footer__copyright">
+        <%- include('../project/_p-copyright') %>
       </div>
     </div>
-    <div class="p-footer__copyright">
-      <%- include('../project/_p-copyright') %>
+  </footer>
+<%# 問い合わせページ以外は上部との余白無し %>
+<% } else { %>
+  <footer class="p-footer">
+    <div class="p-footer__inner">
+      <div class="p-footer__wrap">
+        <div class="p-footer__logo">
+          <%- include('../component/_c-logo') %>
+        </div>
+        <div class="p-footer__nav">
+          <%- include('../project/_p-footer-nav') %>
+        </div>
+      </div>
+      <div class="p-footer__copyright">
+        <%- include('../project/_p-copyright') %>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+<% } %>
