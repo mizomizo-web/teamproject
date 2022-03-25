@@ -38,7 +38,7 @@
   }
 }
 
-.p-mv-content {
+.p-mv__content {
   content: "";
   position: absolute;
   top: 50%;
@@ -50,7 +50,7 @@
   text-align: center;
 }
 
-.p-mv-content__head h1 {
+.p-slide-content__head h1 {
   font-size: rem(28);
   font-weight: bold;
   letter-spacing: 0.05em;
@@ -60,7 +60,7 @@
   }
 }
 
-.p-mv-content__txt {
+.p-slide-content__txt {
   font-size: rem(20);
   font-weight: bold;
   letter-spacing: 0.05em;
