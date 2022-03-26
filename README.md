@@ -1,3 +1,3 @@
 # teamproject
 
-zipファイルをダウンロード後、ターミナルで「cd src」→「npx gulp」と入力してください。
+zipファイルをダウンロード後、VS Codeのターミナルで「cd src」→「npm i」→「npx gulp」と入力
